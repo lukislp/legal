@@ -23,8 +23,10 @@ repository, link it from section 5 of both StudyLife policies (to do).
 
 ## Structure
 
-Plain static HTML, served by GitHub Pages from the root of `main`
-(no build step, no Jekyll: see `.nojekyll`).
+Plain static HTML (no build step, no Jekyll: see `.nojekyll`), deployed to GitHub Pages by
+`.github/workflows/pages.yml` on every push to `main`. The workflow runs `scripts/check.py`
+first and publishes only if it passes, then copies just the public files (pages, `assets/`,
+`favicon.ico`, `CNAME`) into the Pages artifact.
 
 | Path | Content |
 | --- | --- |
