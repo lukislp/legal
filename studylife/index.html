@@ -61,7 +61,6 @@
     <li><strong>Optionale KI-Funktionen</strong>, die nur der Betreiber eines Servers einrichten kann und die Daten nur nach Ihrer Einwilligung an einen externen Anbieter senden. Siehe <a href="#ki">Abschnitt 7</a>.</li>
     <li><strong>Zahlungen</strong> gibt es in StudyLife nicht: Die App bietet keine Käufe an.</li>
   </ol>
-  <p>Wenn der Herausgeber selbst einen StudyLife-Server für andere Personen betreibt, ist er für diesen Server Betreiber im Sinne von b) und informiert dort gesondert.</p>
 
   <h2 id="app">3. Die App auf Ihrem Gerät</h2>
 
@@ -96,7 +95,7 @@
     </tbody>
   </table>
   </div>
-  <p>Beim Abmelden werden Sitzungsschlüssel und Zwischenspeicher gelöscht. Wenn Sie Ihr Konto in der App löschen, entfernt die App zusätzlich die Widget- und Watch-Zusammenfassung und den Spotlight-Index. Nach einer einfachen Abmeldung bleiben Widget-Zusammenfassung und Spotlight-Index derzeit auf dem Gerät, bis Sie die App löschen. Alle genannten Angaben werden gelöscht, wenn Sie die App löschen.</p>
+  <p>Wenn Sie sich abmelden oder Ihr Konto in der App löschen, entfernt die App den Sitzungsschlüssel, die Zwischenspeicher, die Zusammenfassung für Widgets und Apple Watch und den Spotlight-Index von Ihrem Gerät. Alle genannten Angaben werden außerdem gelöscht, wenn Sie die App löschen.</p>
   <p>Rechtsgrundlage für das Speichern und Auslesen dieser Angaben auf Ihrem Gerät ist § 25 Abs. 2 Nr. 2 TDDDG, weil es für die von Ihnen gewünschte Funktion der App unbedingt erforderlich ist; für die Telemetrie-Angaben § 25 Abs. 1 TDDDG (Ihre Einwilligung). Soweit dabei personenbezogene Daten verarbeitet werden, geschieht dies zur Bereitstellung der App (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
   <h3 id="mitteilungen">3.4 Mitteilungen (Push und lokal)</h3>
@@ -162,9 +161,9 @@
   <h2 id="demo">6. Öffentliche Demo (studylife-demo.lktec.org)</h2>
   <p>Unter <code>studylife-demo.lktec.org</code> betreibt der Herausgeber eine Demo-Installation (Verantwortlicher: siehe <a href="#verantwortlicher">Abschnitt 1</a>), die Sie im Browser oder durch Eingabe dieser Adresse in der App aufrufen können. Alle Besucher werden automatisch als dasselbe Demo-Konto mit vorbereiteten Beispieldaten angemeldet. Änderungen, eine Registrierung, Kontolöschung, Telemetrie, Diktat und KI-Funktionen sind dort abgeschaltet.</p>
   <h3 id="demo-verbindung">6.1 Auslieferung über Cloudflare und Hosting</h3>
-  <p>Die Demo ist über das Netzwerk von Cloudflare erreichbar (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare nimmt jede Verbindung entgegen, verarbeitet dabei als Auftragsverarbeiter technisch notwendig Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die Browser-Kennung und Verbindungsmerkmale, schützt die Demo vor Angriffen und leitet die Anfrage verschlüsselt an den Server weiter. <mark class="todo" data-todo>OFFEN: Welche Protokolle, Analysen (Web Analytics) oder Logpush Cloudflare für lktec.org speichert und wie lange, ist noch zu bestätigen.</mark> Cloudflare stützt Übermittlungen in die USA nach eigenen Angaben auf seine Zertifizierung nach dem EU-US Data Privacy Framework und auf Standardvertragsklauseln der EU-Kommission.</p>
-  <p>Der Server der Demo ist ein virtueller Server bei Hostinger International Ltd. (Zypern), der als Auftragsverarbeiter tätig ist. <mark class="todo" data-todo>OFFEN: Standort des Rechenzentrums (Land) des Demo-Servers eintragen.</mark></p>
-  <p>Rechtsgrundlage ist unser berechtigtes Interesse, die Software öffentlich und sicher vorzuführen (Art. 6 Abs. 1 lit. f DSGVO). Mit beiden Anbietern bestehen Vereinbarungen zur Auftragsverarbeitung nach Art. 28 DSGVO auf Grundlage ihrer Vertragsbedingungen.</p>
+  <p>Die Demo ist über das Netzwerk von Cloudflare erreichbar (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare nimmt jede Verbindung entgegen, verarbeitet dabei als Auftragsverarbeiter technisch notwendig Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die Browser-Kennung und Verbindungsmerkmale, schützt die Demo vor Angriffen und leitet die Anfrage verschlüsselt an den Server weiter. Über diese technisch notwendige, kurzzeitige Verarbeitung zur Sicherheit hinaus speichert Cloudflare für uns keine Zugriffsprotokolle und erstellt keine Analysen; zusätzliche Funktionen wie Web Analytics oder Logpush sind nicht eingeschaltet. Cloudflare stützt Übermittlungen in die USA nach eigenen Angaben auf seine Zertifizierung nach dem EU-US Data Privacy Framework und auf Standardvertragsklauseln der EU-Kommission.</p>
+  <p>Der Server der Demo ist ein virtueller Server bei Hostinger International Ltd. (Zypern), der als Auftragsverarbeiter tätig ist. Der Server steht in einem Rechenzentrum in Deutschland; für das Hosting werden keine Daten in Drittländer übermittelt.</p>
+  <p>Rechtsgrundlage ist unser berechtigtes Interesse, die Software öffentlich und sicher vorzuführen (Art. 6 Abs. 1 lit. f DSGVO). Mit beiden Anbietern gelten deren Standardvereinbarungen zur Auftragsverarbeitung nach Art. 28 DSGVO: bei Cloudflare das <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Data Processing Addendum</a>, das Bestandteil der Vertragsbedingungen von Cloudflare ist, bei Hostinger das <a href="https://www.hostinger.com/legal/dpa">Data Processing Addendum</a>, das die Nutzungsbedingungen von Hostinger ergänzt und VPS-Dienste umfasst.</p>
   <h3 id="demo-speicherung">6.2 Was die Demo über Sie speichert</h3>
   <p>Die Demo speichert <strong>weder Ihre IP-Adresse noch Ihre Browser-Kennung</strong>: Der Webserver vor der Demo schreibt kein Zugriffsprotokoll, und StudyLife selbst protokolliert diese Angaben nicht. Für Schutzbegrenzungen wird die IP-Adresse nur im Arbeitsspeicher verwendet. Für jeden Besuch legt die Demo eine Anmeldesitzung an (Prüfwert des Sitzungsschlüssels und Zeitpunkte). Diese Sitzungen werden beim regelmäßigen Zurücksetzen der Demo gelöscht, das mindestens einmal wöchentlich erfolgt und alle Daten der Demo neu aufbaut. In Ihrem Browser bzw. in der App speichert die Demo den Sitzungsschlüssel, Zwischenspeicher und die Sprache im lokalen Speicher (§ 25 Abs. 2 Nr. 2 TDDDG); Cookies setzt sie nicht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (siehe oben).</p>
 
@@ -185,7 +184,7 @@
     <li><strong>Apple</strong> (Apple Distribution International Ltd., Irland; Apple Inc., USA) für App Store, Mitteilungsdienst und freiwillige Absturzberichte, jeweils in eigener Verantwortung bzw. als Anbieter des Dienstes;</li>
     <li><strong>GitHub, Inc.</strong> (USA) beim Öffnen des Marktplatzes, mit den in Abschnitt 3.10 genannten Garantien;</li>
     <li><strong>Cloudflare, Inc.</strong> (USA) als Auftragsverarbeiter für die Demo, mit den in Abschnitt 6.1 genannten Garantien;</li>
-    <li><strong>Hostinger International Ltd.</strong> (Zypern) als Auftragsverarbeiter für den Demo-Server.</li>
+    <li><strong>Hostinger International Ltd.</strong> (Zypern) als Auftragsverarbeiter für den Demo-Server, der in Deutschland steht.</li>
   </ul>
   <p>Wir verkaufen keine Daten und geben sie nicht zu Werbezwecken weiter. Eine Weitergabe an Behörden erfolgt nur, wenn wir gesetzlich dazu verpflichtet sind.</p>
 

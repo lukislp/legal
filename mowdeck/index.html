@@ -62,7 +62,6 @@
     <li><strong>Optionale KI-Funktionen</strong>, die nur der Betreiber eines Servers einrichten kann und die Daten nur nach Ihrer Einwilligung an einen Cloud-Anbieter senden. Siehe <a href="#ki">Abschnitt 7</a>.</li>
     <li><strong>Zahlungen</strong> für einen Tarif, sofern ein Betreiber sie anbietet: Sie laufen über den Zahlungsdienst Stripe im Namen des jeweiligen Betreibers und sind in der iOS-App nicht verfügbar. Siehe <a href="#zahlungen">Abschnitt 8</a>.</li>
   </ol>
-  <p>Wenn der Herausgeber selbst einen MowDeck-Server für andere Personen betreibt, ist er für diesen Server Betreiber im Sinne von b) und informiert dort gesondert.</p>
 
   <h2 id="app">3. Die App auf Ihrem Gerät</h2>
 
@@ -140,17 +139,16 @@
   <p>Wenn Sie in der App „Demo ausprobieren“ wählen oder <code>mowdeck-demo.lktec.org</code> im Browser öffnen, nutzen Sie eine Demo-Installation, die der Herausgeber betreibt (Verantwortlicher: siehe <a href="#verantwortlicher">Abschnitt 1</a>). Die Demo enthält nur simulierte Mäher und Daten. Eine Registrierung ist nicht möglich; Mitteilungen, KI-Anbieter (es gibt nur ein eingebautes Demo-Modell ohne Datenübermittlung), Herstellerclouds und Zahlungen sind abgeschaltet.</p>
 
   <h3 id="demo-verbindung">6.1 Auslieferung über Cloudflare und Hosting</h3>
-  <p>Die Demo ist über das Netzwerk von Cloudflare erreichbar (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare nimmt jede Verbindung entgegen, verarbeitet dabei als Auftragsverarbeiter technisch notwendig Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die Browser-Kennung und Verbindungsmerkmale, schützt die Demo vor Angriffen und leitet die Anfrage verschlüsselt an den Server weiter. <mark class="todo" data-todo>OFFEN: Welche Protokolle, Analysen (Web Analytics) oder Logpush Cloudflare für lktec.org speichert und wie lange, ist noch zu bestätigen.</mark> Cloudflare stützt Übermittlungen in die USA nach eigenen Angaben auf seine Zertifizierung nach dem EU-US Data Privacy Framework und auf Standardvertragsklauseln der EU-Kommission.</p>
-  <p>Der Server der Demo ist ein virtueller Server bei Hostinger International Ltd. (Zypern), der als Auftragsverarbeiter tätig ist. <mark class="todo" data-todo>OFFEN: Standort des Rechenzentrums (Land) des Demo-Servers eintragen.</mark></p>
-  <p>Rechtsgrundlage ist unser berechtigtes Interesse, die Software öffentlich und sicher vorzuführen (Art. 6 Abs. 1 lit. f DSGVO). Mit beiden Anbietern bestehen Vereinbarungen zur Auftragsverarbeitung nach Art. 28 DSGVO auf Grundlage ihrer Vertragsbedingungen.</p>
+  <p>Die Demo ist über das Netzwerk von Cloudflare erreichbar (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare nimmt jede Verbindung entgegen, verarbeitet dabei als Auftragsverarbeiter technisch notwendig Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die Browser-Kennung und Verbindungsmerkmale, schützt die Demo vor Angriffen und leitet die Anfrage verschlüsselt an den Server weiter. Über diese technisch notwendige, kurzzeitige Verarbeitung zur Sicherheit hinaus speichert Cloudflare für uns keine Zugriffsprotokolle und erstellt keine Analysen; zusätzliche Funktionen wie Web Analytics oder Logpush sind nicht eingeschaltet. Cloudflare stützt Übermittlungen in die USA nach eigenen Angaben auf seine Zertifizierung nach dem EU-US Data Privacy Framework und auf Standardvertragsklauseln der EU-Kommission.</p>
+  <p>Der Server der Demo ist ein virtueller Server bei Hostinger International Ltd. (Zypern), der als Auftragsverarbeiter tätig ist. Der Server steht in einem Rechenzentrum in Deutschland; für das Hosting werden keine Daten in Drittländer übermittelt.</p>
+  <p>Rechtsgrundlage ist unser berechtigtes Interesse, die Software öffentlich und sicher vorzuführen (Art. 6 Abs. 1 lit. f DSGVO). Mit beiden Anbietern gelten deren Standardvereinbarungen zur Auftragsverarbeitung nach Art. 28 DSGVO: bei Cloudflare das <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Data Processing Addendum</a>, das Bestandteil der Vertragsbedingungen von Cloudflare ist, bei Hostinger das <a href="https://www.hostinger.com/legal/dpa">Data Processing Addendum</a>, das die Nutzungsbedingungen von Hostinger ergänzt und VPS-Dienste umfasst.</p>
 
   <h3 id="demo-speicherung">6.2 Was die Demo über Sie speichert</h3>
   <p>Die Demo speichert <strong>weder Ihre IP-Adresse noch Ihre Browser-Kennung</strong>: Der Webserver vor der Demo und die Demo selbst schreiben keine Zugriffsprotokolle mit diesen Angaben, und Anmeldesitzungen und Sicherheitsprotokolle werden ohne sie angelegt. Für Schutzbegrenzungen (zum Beispiel höchstens eine bestimmte Zahl neuer Demo-Konten je Adresse und Stunde) wird die IP-Adresse nur im Arbeitsspeicher verwendet und nicht dauerhaft gespeichert.</p>
   <p>Gespeichert werden:</p>
   <ul>
     <li>ein anonymes Demo-Konto mit simulierten Mähern und den Änderungen, die Sie darin vornehmen,</li>
-    <li>Zeitpunkte von Anmeldung und Sitzung sowie das Sicherheitsprotokoll des Demo-Kontos (ohne IP-Adresse),</li>
-    <li>ein Prüfwert (SHA-256) eines zufälligen Geräte-Cookies.</li>
+    <li>Zeitpunkte von Anmeldung und Sitzung sowie das Sicherheitsprotokoll des Demo-Kontos (ohne IP-Adresse).</li>
   </ul>
   <p>Ihr Demo-Konto wird 30 Minuten nach Ihrem letzten Besuch gelöscht, etwa eine Minute nach dem Abmelden und spätestens beim regelmäßigen Zurücksetzen der gesamten Demo, das mindestens einmal täglich erfolgt und alle Daten einschließlich der Protokolle der Demo löscht. Die Angaben beziehen sich auf kein bestimmtes Konto bei Ihnen und sind ohne weitere Informationen keiner Person zuzuordnen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (siehe oben).</p>
 
@@ -161,7 +159,6 @@
     <tbody>
       <tr><td><code>mowdeck_refresh</code></td><td>hält Sie angemeldet (Sitzungsschlüssel, nicht per Skript lesbar)</td><td>bis zur Abmeldung bzw. höchstens 30 Tage; die Sitzung endet mit dem Löschen des Demo-Kontos</td></tr>
       <tr><td><code>mowdeck_session</code></td><td>Hinweis für die Oberfläche, dass eine Sitzung besteht (enthält kein Geheimnis)</td><td>wie oben</td></tr>
-      <tr><td><code>mowdeck_device</code></td><td>zufällige Gerätekennung zur Erkennung neuer Geräte bei der Anmeldung (Kontosicherheit)</td><td>bis zu 400 Tage im Browser; der Prüfwert auf dem Server wird mit dem Demo-Konto gelöscht</td></tr>
       <tr><td>lokaler Speicher (<code>mowdeck.*</code>)</td><td>Einstellungen der Oberfläche wie Design, Kartenansicht, ob die Einführungstour gezeigt wurde</td><td>bis Sie die Website-Daten löschen</td></tr>
     </tbody>
   </table>
@@ -187,7 +184,7 @@
   <ul>
     <li><strong>Apple</strong> (Apple Distribution International Ltd., Irland; Apple Inc., USA) für App Store, Mitteilungsdienst und freiwillige Absturzberichte, jeweils in eigener Verantwortung bzw. als Anbieter des Dienstes;</li>
     <li><strong>Cloudflare, Inc.</strong> (USA) als Auftragsverarbeiter für die Demo, mit den in Abschnitt 6.1 genannten Garantien;</li>
-    <li><strong>Hostinger International Ltd.</strong> (Zypern) als Auftragsverarbeiter für den Demo-Server.</li>
+    <li><strong>Hostinger International Ltd.</strong> (Zypern) als Auftragsverarbeiter für den Demo-Server, der in Deutschland steht.</li>
   </ul>
   <p>Wir verkaufen keine Daten und geben sie nicht zu Werbezwecken weiter. Eine Weitergabe an Behörden erfolgt nur, wenn wir gesetzlich dazu verpflichtet sind.</p>
 

@@ -61,7 +61,6 @@
     <li><strong>Optional AI features</strong>, which only a server's operator can set up and which send data to an external provider only after your consent. See <a href="#ai">section 7</a>.</li>
     <li><strong>Payments</strong> do not exist in StudyLife: the app offers no purchases.</li>
   </ol>
-  <p>If the publisher runs a StudyLife server for other people himself, he is the operator of that server within the meaning of b) and provides separate information there.</p>
 
   <h2 id="app">3. The app on your device</h2>
 
@@ -96,7 +95,7 @@
     </tbody>
   </table>
   </div>
-  <p>Signing out deletes the session key and the caches. If you delete your account in the app, the app also removes the widget and Watch summary and the Spotlight index. After a plain sign-out, the widget summary and the Spotlight index currently remain on the device until you delete the app. All items above are deleted when you delete the app.</p>
+  <p>When you sign out or delete your account in the app, the app removes the session key, the caches, the summary for widgets and Apple Watch and the Spotlight index from your device. All items above are also deleted when you delete the app.</p>
   <p>The legal basis for storing and reading this information on your device is Section 25(2) no. 2 of the German TDDDG, because it is strictly necessary for the app function you requested; for the telemetry items, Section 25(1) TDDDG (your consent). Where personal data is processed in the process, this is done to provide the app (Art. 6(1)(b) GDPR).</p>
 
   <h3 id="notifications">3.4 Notifications (push and local)</h3>
@@ -162,9 +161,9 @@
   <h2 id="demo">6. Public demo (studylife-demo.lktec.org)</h2>
   <p>At <code>studylife-demo.lktec.org</code>, the publisher runs a demo installation (controller: see <a href="#controller">section 1</a>) that you can open in a browser or by entering this address in the app. All visitors are signed in automatically to the same demo account with prepared sample data. Changes, registration, account deletion, telemetry, dictation and AI features are switched off there.</p>
   <h3 id="demo-delivery">6.1 Delivery via Cloudflare and hosting</h3>
-  <p>The demo is reached through the Cloudflare network (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare accepts every connection, processes as a processor, as technically necessary, your IP address, date and time, the requested address, the browser identifier and connection characteristics, protects the demo against attacks and forwards the request encrypted to the server. <mark class="todo" data-todo>OPEN: which logs, analytics (Web Analytics) or Logpush Cloudflare keeps for lktec.org, and for how long, is still to be confirmed.</mark> According to Cloudflare, it bases transfers to the USA on its certification under the EU-U.S. Data Privacy Framework and on the European Commission's Standard Contractual Clauses.</p>
-  <p>The demo's server is a virtual server at Hostinger International Ltd. (Cyprus), acting as a processor. <mark class="todo" data-todo>OPEN: enter the data centre location (country) of the demo server.</mark></p>
-  <p>The legal basis is our legitimate interest in presenting the software publicly and securely (Art. 6(1)(f) GDPR). Data processing agreements under Art. 28 GDPR are in place with both providers on the basis of their terms.</p>
+  <p>The demo is reached through the Cloudflare network (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare accepts every connection, processes as a processor, as technically necessary, your IP address, date and time, the requested address, the browser identifier and connection characteristics, protects the demo against attacks and forwards the request encrypted to the server. Beyond this technically necessary, short-lived processing for security, Cloudflare keeps no access logs and produces no analytics for us; additional features such as Web Analytics or Logpush are not turned on. According to Cloudflare, it bases transfers to the USA on its certification under the EU-U.S. Data Privacy Framework and on the European Commission's Standard Contractual Clauses.</p>
+  <p>The demo's server is a virtual server at Hostinger International Ltd. (Cyprus), acting as a processor. The server is located in a data centre in Germany; hosting involves no transfer of data to third countries.</p>
+  <p>The legal basis is our legitimate interest in presenting the software publicly and securely (Art. 6(1)(f) GDPR). The standard data processing agreements of both providers under Art. 28 GDPR apply: for Cloudflare its <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Data Processing Addendum</a>, which forms part of Cloudflare's terms, and for Hostinger its <a href="https://www.hostinger.com/legal/dpa">Data Processing Addendum</a>, which supplements Hostinger's terms of service and covers VPS services.</p>
   <h3 id="demo-storage">6.2 What the demo stores about you</h3>
   <p>The demo stores <strong>neither your IP address nor your browser identifier</strong>: the web server in front of the demo writes no access log, and StudyLife itself does not log this information. For protective limits, the IP address is used in memory only. For each visit, the demo creates a sign-in session (a hash of the session key and timestamps). These sessions are deleted at the regular reset of the demo, which takes place at least once a week and rebuilds all demo data. In your browser or in the app, the demo stores the session key, caches and the language in local storage (Section 25(2) no. 2 TDDDG); it sets no cookies. The legal basis is Art. 6(1)(f) GDPR (see above).</p>
 
@@ -185,7 +184,7 @@
     <li><strong>Apple</strong> (Apple Distribution International Ltd., Ireland; Apple Inc., USA) for the App Store, the notification service and voluntary crash reports, each under its own responsibility or as provider of the service;</li>
     <li><strong>GitHub, Inc.</strong> (USA) when you open the marketplace, with the safeguards named in section 3.10;</li>
     <li><strong>Cloudflare, Inc.</strong> (USA) as a processor for the demo, with the safeguards named in section 6.1;</li>
-    <li><strong>Hostinger International Ltd.</strong> (Cyprus) as a processor for the demo server.</li>
+    <li><strong>Hostinger International Ltd.</strong> (Cyprus) as a processor for the demo server, which is located in Germany.</li>
   </ul>
   <p>We do not sell data and do not share it for advertising. Data is only disclosed to authorities where we are legally obliged to do so.</p>
 

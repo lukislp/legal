@@ -62,7 +62,6 @@
     <li><strong>Optional AI features</strong>, which only a server's operator can set up and which send data to a cloud provider only after your consent. See <a href="#ai">section 7</a>.</li>
     <li><strong>Payments</strong> for a plan, where an operator offers them: they run through the payment service Stripe on behalf of that operator and are not available in the iOS app. See <a href="#payments">section 8</a>.</li>
   </ol>
-  <p>If the publisher runs a MowDeck server for other people himself, he is the operator of that server within the meaning of b) and provides separate information there.</p>
 
   <h2 id="app">3. The app on your device</h2>
 
@@ -140,17 +139,16 @@
   <p>If you choose "Try the demo" in the app or open <code>mowdeck-demo.lktec.org</code> in a browser, you use a demo installation run by the publisher (controller: see <a href="#controller">section 1</a>). The demo contains only simulated mowers and data. Registration is not possible; notifications, AI providers (there is only a built-in demo model that transmits nothing), manufacturer clouds and payments are switched off.</p>
 
   <h3 id="demo-delivery">6.1 Delivery via Cloudflare and hosting</h3>
-  <p>The demo is reached through the Cloudflare network (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare accepts every connection, processes as a processor, as technically necessary, your IP address, date and time, the requested address, the browser identifier and connection characteristics, protects the demo against attacks and forwards the request encrypted to the server. <mark class="todo" data-todo>OPEN: which logs, analytics (Web Analytics) or Logpush Cloudflare keeps for lktec.org, and for how long, is still to be confirmed.</mark> According to Cloudflare, it bases transfers to the USA on its certification under the EU-U.S. Data Privacy Framework and on the European Commission's Standard Contractual Clauses.</p>
-  <p>The demo's server is a virtual server at Hostinger International Ltd. (Cyprus), acting as a processor. <mark class="todo" data-todo>OPEN: enter the data centre location (country) of the demo server.</mark></p>
-  <p>The legal basis is our legitimate interest in presenting the software publicly and securely (Art. 6(1)(f) GDPR). Data processing agreements under Art. 28 GDPR are in place with both providers on the basis of their terms.</p>
+  <p>The demo is reached through the Cloudflare network (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare accepts every connection, processes as a processor, as technically necessary, your IP address, date and time, the requested address, the browser identifier and connection characteristics, protects the demo against attacks and forwards the request encrypted to the server. Beyond this technically necessary, short-lived processing for security, Cloudflare keeps no access logs and produces no analytics for us; additional features such as Web Analytics or Logpush are not turned on. According to Cloudflare, it bases transfers to the USA on its certification under the EU-U.S. Data Privacy Framework and on the European Commission's Standard Contractual Clauses.</p>
+  <p>The demo's server is a virtual server at Hostinger International Ltd. (Cyprus), acting as a processor. The server is located in a data centre in Germany; hosting involves no transfer of data to third countries.</p>
+  <p>The legal basis is our legitimate interest in presenting the software publicly and securely (Art. 6(1)(f) GDPR). The standard data processing agreements of both providers under Art. 28 GDPR apply: for Cloudflare its <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Data Processing Addendum</a>, which forms part of Cloudflare's terms, and for Hostinger its <a href="https://www.hostinger.com/legal/dpa">Data Processing Addendum</a>, which supplements Hostinger's terms of service and covers VPS services.</p>
 
   <h3 id="demo-storage">6.2 What the demo stores about you</h3>
   <p>The demo stores <strong>neither your IP address nor your browser identifier</strong>: the web server in front of the demo and the demo itself write no access logs containing them, and sign-in sessions and security logs are created without them. For protective limits (for example a maximum number of new demo accounts per address per hour), the IP address is used in memory only and not stored.</p>
   <p>What is stored:</p>
   <ul>
     <li>an anonymous demo account with simulated mowers and the changes you make in it,</li>
-    <li>times of sign-in and session, and the demo account's security log (without IP address),</li>
-    <li>a hash (SHA-256) of a random device cookie.</li>
+    <li>times of sign-in and session, and the demo account's security log (without IP address).</li>
   </ul>
   <p>Your demo account is deleted 30 minutes after your last visit, about one minute after you sign out, and at the latest at the regular reset of the entire demo, which takes place at least once a day and deletes all data including the demo's logs. This data does not relate to any account of yours and cannot be attributed to a person without additional information. The legal basis is Art. 6(1)(f) GDPR (see above).</p>
 
@@ -161,7 +159,6 @@
     <tbody>
       <tr><td><code>mowdeck_refresh</code></td><td>keeps you signed in (session key, not readable by scripts)</td><td>until you sign out, at most 30 days; the session ends when the demo account is deleted</td></tr>
       <tr><td><code>mowdeck_session</code></td><td>tells the interface that a session exists (contains no secret)</td><td>as above</td></tr>
-      <tr><td><code>mowdeck_device</code></td><td>random device ID to recognise new devices at sign-in (account security)</td><td>up to 400 days in the browser; the hash on the server is deleted with the demo account</td></tr>
       <tr><td>local storage (<code>mowdeck.*</code>)</td><td>interface settings such as theme, map view, whether the introductory tour was shown</td><td>until you clear the website data</td></tr>
     </tbody>
   </table>
@@ -187,7 +184,7 @@
   <ul>
     <li><strong>Apple</strong> (Apple Distribution International Ltd., Ireland; Apple Inc., USA) for the App Store, the notification service and voluntary crash reports, each under its own responsibility or as provider of the service;</li>
     <li><strong>Cloudflare, Inc.</strong> (USA) as a processor for the demo, with the safeguards named in section 6.1;</li>
-    <li><strong>Hostinger International Ltd.</strong> (Cyprus) as a processor for the demo server.</li>
+    <li><strong>Hostinger International Ltd.</strong> (Cyprus) as a processor for the demo server, which is located in Germany.</li>
   </ul>
   <p>We do not sell data and do not share it for advertising. Data is only disclosed to authorities where we are legally obliged to do so.</p>
 
