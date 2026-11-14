@@ -118,3 +118,6 @@ th { background: var(--accent-soft); }
   color: var(--muted); font-size: 0.9rem;
 }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+
+/* Open points: visible in review, rejected by scripts/check.py. */
+mark.todo { background: #ffe36e; color: #1d1f1c; padding: 0.05rem 0.3rem; border-radius: 0.25rem; font-weight: 600; }

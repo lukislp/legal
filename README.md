@@ -18,6 +18,8 @@ the server a user connects to is the controller for the account and content data
 stored there and must publish their own privacy policy for it. These texts do
 not replace that policy. MowDeck ships a starting template for operators at
 [`apps/web/static/legal/privacy.md`](https://github.com/lukislp/mowdeck/blob/main/apps/web/static/legal/privacy.md).
+StudyLife does not have such a template yet; once it exists in the studylife
+repository, link it from section 5 of both StudyLife policies (to do).
 
 ## Structure
 

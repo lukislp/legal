@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MowDeck privacy policy – lktec.org</title>
+<meta name="description" content="Privacy policy for the MowDeck app: what the app processes, who is responsible and what rights you have.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="alternate" hreflang="de" href="/mowdeck/">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/en/">lktec.org <span>· Legal</span></a>
+  <nav aria-label="Language">
+    <ul class="lang-switch">
+      <li><a href="/mowdeck/" hreflang="de" lang="de">DE</a></li>
+      <li><span aria-current="page" lang="en">EN</span></li>
+    </ul>
+  </nav>
+</header>
+<main id="content">
+  <h1>Privacy policy for the MowDeck app</h1>
+  <p class="meta">Version 1.0 · Last updated: 14 November 2026</p>
+
+  <div class="card note">
+    <p><strong>In short.</strong> MowDeck is an app for self-hosted server software that controls robotic lawn mowers. The app itself contains no analytics, advertising, tracking or crash-reporting software and sends data only to the MowDeck server whose address you enter, and to Apple for notifications. The operator of that server, not the publisher of the app, is responsible for the data stored there. Only if you choose "Try the demo" does the app connect to the public demo run by the publisher; the demo stores neither your IP address nor your browser identifier.</p>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#controller">Controller and contact</a></li>
+      <li><a href="#scope">Scope: who is responsible for what</a></li>
+      <li><a href="#app">The app on your device</a></li>
+      <li><a href="#permissions">App permissions</a></li>
+      <li><a href="#server">Self-hosted MowDeck servers</a></li>
+      <li><a href="#demo">Public demo (mowdeck-demo.lktec.org)</a></li>
+      <li><a href="#ai">Optional AI features</a></li>
+      <li><a href="#payments">Payments</a></li>
+      <li><a href="#recipients">Recipients and transfers to third countries</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#complaint">Right to lodge a complaint</a></li>
+      <li><a href="#further">Further information</a></li>
+      <li><a href="#changes">Changes to this privacy policy</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="controller">1. Controller and contact</h2>
+  <p>The controller within the meaning of the General Data Protection Regulation (GDPR) for the processing that this policy attributes to the publisher (in particular sections 3 and 6) is:</p>
+  <div class="card">
+    <address>Lukas Körber<br>Mühlbachstraße 24<br>91281 Kirchenthumbach<br>Germany<br>
+    Email: <a href="mailto:koerber.lukas@t-online.de">koerber.lukas@t-online.de</a></address>
+  </div>
+  <p>Referred to below as "we" or "the publisher". No data protection officer has been appointed, as there is no legal obligation to do so. For any data protection question and to exercise your rights, contact us at the email address above.</p>
+
+  <h2 id="scope">2. Scope: who is responsible for what</h2>
+  <p>MowDeck is open-source software (<a href="https://github.com/lukislp/mowdeck">github.com/lukislp/mowdeck</a>) made of two parts: a server that each person or organisation runs themselves, and the app that connects to such a server. This leads to different responsibilities:</p>
+  <ol type="a">
+    <li><strong>The app as published by the publisher on the App Store.</strong> It processes data mostly on your device and uses Apple services (App Store, notification service). The publisher receives no personal data from you through the app, with the exceptions in section 3.7 (voluntary crash reports via Apple) and section 6 (demo). See <a href="#app">section 3</a>.</li>
+    <li><strong>Self-hosted MowDeck servers.</strong> Whoever runs the server you connect the app to is responsible for your account and all data stored there (for example mowers, positions, maps, camera pictures, credentials for manufacturer clouds, payments) and must provide you with their own privacy policy. The publisher has no access to these servers. See <a href="#server">section 5</a>.</li>
+    <li><strong>The public demo</strong> at <code>mowdeck-demo.lktec.org</code>, run by the publisher. See <a href="#demo">section 6</a>.</li>
+    <li><strong>Optional AI features</strong>, which only a server's operator can set up and which send data to a cloud provider only after your consent. See <a href="#ai">section 7</a>.</li>
+    <li><strong>Payments</strong> for a plan, where an operator offers them: they run through the payment service Stripe on behalf of that operator and are not available in the iOS app. See <a href="#payments">section 8</a>.</li>
+  </ol>
+
+  <h2 id="app">3. The app on your device</h2>
+
+  <h3 id="app-store">3.1 Download from the App Store</h3>
+  <p>The app is distributed through Apple's App Store. When you download it, Apple (Apple Distribution International Ltd., Ireland, or Apple Inc., USA) processes data such as your Apple ID, device data and purchase information under its own responsibility. The publisher has no influence on this. For details, see <a href="https://www.apple.com/legal/privacy/en-ww/">Apple's privacy policy</a>.</p>
+
+  <h3 id="connections">3.2 What the app connects to</h3>
+  <p>On first launch you enter the address of your MowDeck server or choose "Try the demo". There is no default address. After that, the app connects only to</p>
+  <ul>
+    <li>the MowDeck server whose address you entered (the app only opens addresses that identify themselves as a MowDeck server),</li>
+    <li>the public demo, if you choose "Try the demo" (<a href="#demo">section 6</a>), and</li>
+    <li>the Apple Push Notification service for notifications (<a href="#notifications">section 3.4</a>).</li>
+  </ul>
+  <p>The app contains no third-party software for audience measurement, advertising, tracking or crash reporting. It uses neither Firebase nor any comparable service. Links to the project on GitHub or to the licence text open in your browser; only then do the privacy terms of that website apply.</p>
+  <p>You sign in on a sign-in page of your server, opened in a system window without stored browser data. Your credentials go only to your server.</p>
+
+  <h3 id="device">3.3 What is stored on your device</h3>
+  <p>For the app to work, it stores the following on your device. The publisher does not receive any of it.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Item</th><th scope="col">Where</th><th scope="col">Purpose and deletion</th></tr></thead>
+    <tbody>
+      <tr><td>Address of the chosen server</td><td>app settings</td><td>connecting on the next launch; removed when you delete the app or choose another server.</td></tr>
+      <tr><td>Language chosen on the start page</td><td>app's local storage</td><td>display before sign-in; deleted with the app.</td></tr>
+      <tr><td>Sign-in cookies and settings of the web interface (for example theme, map view)</td><td>storage of the embedded web interface</td><td>staying signed in and convenience; set by your server (see its privacy policy) and removed when you sign out or delete the app.</td></tr>
+      <tr><td>Random installation ID</td><td>Keychain (this device only, no iCloud sync)</td><td>lets your server assign notifications to this device. It is sent to your server and survives a reinstall of the app until the device is reset.</td></tr>
+      <tr><td>Access key for widgets, Live Activity and Apple Watch, with server address and expiry date</td><td>Keychain (this device only)</td><td>lets widgets and shortcuts fetch status and send commands. Valid for 90 days, renewed automatically, revoked and deleted when you sign out or turn widgets off.</td></tr>
+      <tr><td>Mower list (ID, name), last status per mower, schedule, Live Activity tokens</td><td>storage shared by the app and its extensions (App Group)</td><td>display in widgets, Live Activity and on Apple Watch; deleted when you sign out or turn widgets off.</td></tr>
+      <tr><td>App icon badge count</td><td>app settings</td><td>shows unread notifications.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The legal basis for storing and reading this information on your device is Section 25(2) no. 2 of the German TDDDG, because it is strictly necessary for the app function you requested. Where personal data is processed in the process, this is done to provide the app (Art. 6(1)(b) GDPR).</p>
+
+  <h3 id="notifications">3.4 Notifications (push)</h3>
+  <p>If you allow notifications, the app receives a device token from Apple. The app sends it, together with the installation ID and the label "MowDeck iOS", to your MowDeck server, which stores it. Your server sends notifications to your device through the Apple Push Notification service (APNs) of Apple Inc. Apple processes the device token and the content of the notification.</p>
+  <p>Depending on the kind of notification, the content can include a mower's name, a status message, for lift, theft or geofence alerts the <strong>GPS coordinates of the mower</strong>, and for new sign-in alerts the browser, operating system and a shortened IP address. Camera pictures are not sent through Apple: the app downloads them directly from your server via a time-limited link. Your server also sends silent notifications to refresh widgets and Live Activities.</p>
+  <p>The operator of your server is responsible for the processing on the server and for which notifications are sent (<a href="#server">section 5</a>). Your server deletes the device token when you sign out, when Apple reports it as invalid and when your account is deleted. You can turn notifications off at any time in the iOS settings. Notifications are switched off in the public demo.</p>
+
+  <h3 id="widgets">3.5 Widgets, Live Activity, Apple Watch and shortcuts</h3>
+  <p>Widgets, the Live Activity on the lock screen and the shortcuts "Start Mowing", "Pause Mowing" and "Return To Station" use the access key from section 3.3 to fetch status from, or send commands to, your server. The Apple Watch app stores no access key and does not connect to any server itself; it receives the status through its connection to your iPhone. Data only travels between your devices and your server.</p>
+
+  <h3 id="network">3.6 Local network</h3>
+  <p>Many MowDeck servers are on a home network. iOS therefore asks for permission to reach devices on the local network. The app uses this permission only to reach your MowDeck server. It does not search for other devices.</p>
+
+  <h3 id="crash-reports">3.7 Crash reports and usage statistics via Apple</h3>
+  <p>If you have turned on "Share with App Developers" in the iOS settings under "Privacy &amp; Security → Analytics &amp; Improvements", Apple provides the publisher with crash reports and aggregated usage statistics for the app. According to Apple, this data is only shared in a form that does not identify you. The publisher uses it only to find and fix errors. The legal basis is the consent you gave to Apple (Art. 6(1)(a) GDPR), which you can withdraw in the iOS settings at any time. The data is kept in App Store Connect for as long as Apple provides.</p>
+
+  <h2 id="permissions">4. App permissions</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Permission</th><th scope="col">What it is used for</th><th scope="col">If you decline</th></tr></thead>
+    <tbody>
+      <tr><td>Notifications (including time-sensitive notifications)</td><td>alerts and status messages from your server, for example when a mower is lifted or has an error. Theft and lift alerts are delivered as time-sensitive.</td><td>The app works, without notifications in the background.</td></tr>
+      <tr><td>Local network</td><td>connecting to a MowDeck server on your home network.</td><td>A server on the home network cannot be reached; servers with a public address keep working.</td></tr>
+      <tr><td>Live Activities (system setting)</td><td>showing a running mowing job on the lock screen.</td><td>No lock screen display.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The app does not ask for your location, camera, microphone, photos, contacts, Bluetooth or health data and cannot access them. Locations you see in MowDeck are the positions of your mower, which your server receives from the mower or the manufacturer's cloud.</p>
+
+  <h2 id="server">5. Self-hosted MowDeck servers</h2>
+  <p>The <strong>operator of the server</strong> you connect the app to is responsible for all data stored on that server. This can be a private person (for example a family member), an association or a company. Please contact that operator with questions about this data and to exercise your rights. They must provide you with their own privacy policy; MowDeck includes a <a href="https://github.com/lukislp/mowdeck/blob/main/apps/web/static/legal/privacy.md">template for operators</a> for this, which can be shown on the server at <code>/legal/privacy</code>.</p>
+  <p>To help you understand what is typically processed there, the overview below describes the features of the software. What a particular server actually stores, for how long and with whom it shares data is decided by its operator.</p>
+  <ul>
+    <li><strong>Account:</strong> user name, display name, optionally an email address, password as a hash (Argon2id), passkeys (public key, device label), and for sign-in with GitHub or Apple only the identifier from there. For sessions, sign-in attempts and the security log, the server stores the IP address and browser identifier; a device cookie is used to warn about sign-ins from new devices.</li>
+    <li><strong>Mowers and garden:</strong> status, battery level, errors, schedules, maps and zones, position history with Wi-Fi and mobile signal strength (and the coverage and signal maps built from it), camera pictures for camera models, positions and photos when theft tracking is turned on.</li>
+    <li><strong>Manufacturer clouds:</strong> to connect a mower, the server stores your credentials for the manufacturer's cloud (currently Mammotion, Husqvarna Automower Connect and Worx/Kress/LandXcape) in encrypted form and exchanges status, maps and commands directly with that cloud. The manufacturers process this data under their own responsibility and their own privacy terms.</li>
+    <li><strong>Other services an operator can turn on:</strong> weather data (Open-Meteo, with a location rounded to about one kilometre), map tiles and aerial pictures from a map provider, notifications via ntfy or Web Push, sign-in with GitHub or Apple, AI features (<a href="#ai">section 7</a>) and payments (<a href="#payments">section 8</a>).</li>
+  </ul>
+  <h3 id="delete-account">5.1 Deleting your account</h3>
+  <p>You can delete your account directly in the app: Settings → Profile → "Delete account" ("Delete me" for a member of an account). A member is deleted immediately. An account owner's account is deleted with all its data after a 7-day waiting period, which you can cancel until then. What may still exist afterwards – for example the operator's backups, invoices at the payment provider, or data in manufacturers' clouds and at AI providers – is described in your operator's privacy policy. You remove the data on your device (section 3.3) by signing out or deleting the app.</p>
+
+  <h2 id="demo">6. Public demo (mowdeck-demo.lktec.org)</h2>
+  <p>If you choose "Try the demo" in the app or open <code>mowdeck-demo.lktec.org</code> in a browser, you use a demo installation run by the publisher (controller: see <a href="#controller">section 1</a>). The demo contains only simulated mowers and data. Registration is not possible; notifications, AI providers (there is only a built-in demo model that transmits nothing), manufacturer clouds and payments are switched off.</p>
+
+  <h3 id="demo-delivery">6.1 Delivery via Cloudflare and hosting</h3>
+  <p>The demo is reached through the Cloudflare network (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare accepts every connection, processes as a processor, as technically necessary, your IP address, date and time, the requested address, the browser identifier and connection characteristics, protects the demo against attacks and forwards the request encrypted to the server. Beyond this technically necessary, short-lived processing for security, Cloudflare keeps no access logs and produces no analytics for us; additional features such as Web Analytics or Logpush are not turned on. According to Cloudflare, it bases transfers to the USA on its certification under the EU-U.S. Data Privacy Framework and on the European Commission's Standard Contractual Clauses.</p>
+  <p>The demo's server is a virtual server at Hostinger International Ltd. (Cyprus), acting as a processor. The server is located in a data centre in Germany; hosting involves no transfer of data to third countries.</p>
+  <p>The legal basis is our legitimate interest in presenting the software publicly and securely (Art. 6(1)(f) GDPR). The standard data processing agreements of both providers under Art. 28 GDPR apply: for Cloudflare its <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Data Processing Addendum</a>, which forms part of Cloudflare's terms, and for Hostinger its <a href="https://www.hostinger.com/legal/dpa">Data Processing Addendum</a>, which supplements Hostinger's terms of service and covers VPS services.</p>
+
+  <h3 id="demo-storage">6.2 What the demo stores about you</h3>
+  <p>The demo stores <strong>neither your IP address nor your browser identifier</strong>: the web server in front of the demo and the demo itself write no access logs containing them, and sign-in sessions and security logs are created without them. For protective limits (for example a maximum number of new demo accounts per address per hour), the IP address is used in memory only and not stored.</p>
+  <p>What is stored:</p>
+  <ul>
+    <li>an anonymous demo account with simulated mowers and the changes you make in it,</li>
+    <li>times of sign-in and session, and the demo account's security log (without IP address).</li>
+  </ul>
+  <p>Your demo account is deleted 30 minutes after your last visit, about one minute after you sign out, and at the latest at the regular reset of the entire demo, which takes place at least once a day and deletes all data including the demo's logs. This data does not relate to any account of yours and cannot be attributed to a person without additional information. The legal basis is Art. 6(1)(f) GDPR (see above).</p>
+
+  <h3 id="demo-cookies">6.3 Cookies and local storage in the demo</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Name</th><th scope="col">Purpose</th><th scope="col">Duration</th></tr></thead>
+    <tbody>
+      <tr><td><code>mowdeck_refresh</code></td><td>keeps you signed in (session key, not readable by scripts)</td><td>until you sign out, at most 30 days; the session ends when the demo account is deleted</td></tr>
+      <tr><td><code>mowdeck_session</code></td><td>tells the interface that a session exists (contains no secret)</td><td>as above</td></tr>
+      <tr><td>local storage (<code>mowdeck.*</code>)</td><td>interface settings such as theme, map view, whether the introductory tour was shown</td><td>until you clear the website data</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>No cookies are set for analytics or advertising. The legal basis for storing information on your device is Section 25(2) no. 2 TDDDG, as it is strictly necessary for the demo you requested and its security.</p>
+
+  <h2 id="ai">7. Optional AI features</h2>
+  <p>The operator of a MowDeck server can set up AI features: AI assistance for freeing a stuck mower, automatic error analysis and a chat assistant. Whether and with which provider is decided by the operator; depending on the settings, you can also enter your own provider with your own key.</p>
+  <ul>
+    <li><strong>Data sent:</strong> up to four camera pictures from the mower, a map sketch with area names, status (position, activity, error, signal) and, for the chat, the text you type with mower and area names. Camera pictures can show people, such as children or neighbours.</li>
+    <li><strong>Possible recipients:</strong> Anthropic, OpenAI, Google (Gemini), Mistral, a compatible endpoint named by the operator, or a locally run model (Ollama), in which case no data goes to third parties.</li>
+    <li><strong>Consent:</strong> before any data goes to a cloud provider, MowDeck explicitly asks for your consent (Art. 6(1)(a) GDPR) and names the provider and model. The consent applies only to that provider, model and endpoint, is checked on the server and can be withdrawn in the settings at any time. If the operator changes the provider, you are asked again. An unknown endpoint counts as a cloud provider.</li>
+    <li><strong>Retention:</strong> an AI proposal is valid for five minutes; its pictures are deleted with the proposal unless the operator sets otherwise. How long the AI provider keeps data depends on its terms.</li>
+    <li><strong>Third countries:</strong> several of these providers are based in the USA. The transfer, its legal basis and the safeguards (for example the Data Privacy Framework or Standard Contractual Clauses) are described by the operator in their privacy policy.</li>
+  </ul>
+  <p>The operator of your server is responsible for this processing. The publisher receives none of this data. In the public demo, no data is sent to AI providers.</p>
+
+  <h2 id="payments">8. Payments</h2>
+  <p>You cannot buy anything in the iOS app; it shows no prices or payment links and uses no in-app purchases. If an operator offers paid plans, they handle them through the web interface of their server with the payment service Stripe and are responsible for them as the merchant. You then enter payment details directly at Stripe; details are in the operator's privacy policy. The publisher receives no payment data.</p>
+
+  <h2 id="recipients">9. Recipients and transfers to third countries</h2>
+  <p>For the processing the publisher is responsible for, data is received only by:</p>
+  <ul>
+    <li><strong>Apple</strong> (Apple Distribution International Ltd., Ireland; Apple Inc., USA) for the App Store, the notification service and voluntary crash reports, each under its own responsibility or as provider of the service;</li>
+    <li><strong>Cloudflare, Inc.</strong> (USA) as a processor for the demo, with the safeguards named in section 6.1;</li>
+    <li><strong>Hostinger International Ltd.</strong> (Cyprus) as a processor for the demo server, which is located in Germany.</li>
+  </ul>
+  <p>We do not sell data and do not share it for advertising. Data is only disclosed to authorities where we are legally obliged to do so.</p>
+
+  <h2 id="rights">10. Your rights</h2>
+  <p>Under the GDPR you have the right to</p>
+  <ul>
+    <li>access the data stored about you (Art. 15),</li>
+    <li>rectification of inaccurate data (Art. 16),</li>
+    <li>erasure (Art. 17),</li>
+    <li>restriction of processing (Art. 18),</li>
+    <li>data portability (Art. 20),</li>
+    <li>withdraw consent with effect for the future (Art. 7(3)); this does not affect the lawfulness of processing carried out before the withdrawal.</li>
+  </ul>
+  <div class="card note">
+    <p><strong>Right to object (Art. 21 GDPR).</strong> Where we process data on the basis of our legitimate interest (Art. 6(1)(f) GDPR), you can object at any time on grounds relating to your particular situation. We will then no longer process the data unless we can demonstrate compelling legitimate grounds.</p>
+  </div>
+  <p>For processing by the publisher (sections 3 and 6), contact the email address in <a href="#controller">section 1</a>. Because the demo stores nothing that would let us recognise you, we usually cannot match a request about a demo visit to any record (Art. 11 GDPR); the data is deleted within a day in any case. For data on a self-hosted server, contact its operator.</p>
+
+  <h2 id="complaint">11. Right to lodge a complaint</h2>
+  <p>You have the right to lodge a complaint with a data protection supervisory authority, in particular in the Member State of your habitual residence, place of work or place of the alleged infringement (Art. 77 GDPR). The authority competent for the publisher is:</p>
+  <div class="card">
+    <address>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br>Promenade 18<br>91522 Ansbach, Germany<br><a href="https://www.lda.bayern.de">www.lda.bayern.de</a></address>
+  </div>
+
+  <h2 id="further">12. Further information</h2>
+  <dl class="facts">
+    <dt>Obligation to provide data</dt>
+    <dd>You are not obliged to provide any data. Without a connection to a server or the demo, however, the app cannot be used; without permission for notifications, you receive no notifications.</dd>
+    <dt>Automated decisions</dt>
+    <dd>There is no automated decision-making, including profiling, within the meaning of Art. 22 GDPR. Results of the AI features are proposals and answers that you decide on yourself.</dd>
+    <dt>Children</dt>
+    <dd>The app is intended for owners of robotic lawn mowers, not for children. The publisher does not knowingly collect data from children through the app.</dd>
+    <dt>Security</dt>
+    <dd>The app connects to the demo only over an encrypted connection (HTTPS). How your own server is secured is the responsibility of its operator.</dd>
+  </dl>
+
+  <h2 id="changes">13. Changes to this privacy policy</h2>
+  <p>We update this privacy policy when the app, the demo or the law changes. The version published here applies; the version and date are shown at the top. Every earlier version and every change can be traced in the <a href="https://github.com/lukislp/legal/commits/main">change history</a>. This English version is a translation; the German version is binding.</p>
+</main>
+<footer class="site-footer">
+  <ul>
+    <li><a href="https://lktec.org/en/imprint">Legal notice</a></li>
+    <li><a href="https://github.com/lukislp/legal/commits/main">Change history</a></li>
+    <li><a href="/mowdeck/" hreflang="de">Deutsche Fassung</a></li>
+  </ul>
+</footer>
+</body>
+</html>

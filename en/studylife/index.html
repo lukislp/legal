@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudyLife privacy policy – lktec.org</title>
+<meta name="description" content="Privacy policy for the StudyLife app: what the app processes, who is responsible and what rights you have.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="alternate" hreflang="de" href="/studylife/">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/en/">lktec.org <span>· Legal</span></a>
+  <nav aria-label="Language">
+    <ul class="lang-switch">
+      <li><a href="/studylife/" hreflang="de" lang="de">DE</a></li>
+      <li><span aria-current="page" lang="en">EN</span></li>
+    </ul>
+  </nav>
+</header>
+<main id="content">
+  <h1>Privacy policy for the StudyLife app</h1>
+  <p class="meta">Version 1.0 · Last updated: 14 November 2026</p>
+
+  <div class="card note">
+    <p><strong>In short.</strong> StudyLife is an app for self-hosted server software for planning and tracking your studies. The app contains no third-party analytics, advertising, tracking or crash-reporting software and sends your data only to the StudyLife server whose address you enter, and to Apple for notifications. The operator of that server, not the publisher of the app, is responsible for the data stored there. Data from Apple Health is evaluated on your device only and never leaves it.</p>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#controller">Controller and contact</a></li>
+      <li><a href="#scope">Scope: who is responsible for what</a></li>
+      <li><a href="#app">The app on your device</a></li>
+      <li><a href="#permissions">App permissions</a></li>
+      <li><a href="#server">Self-hosted StudyLife servers</a></li>
+      <li><a href="#demo">Public demo (studylife-demo.lktec.org)</a></li>
+      <li><a href="#ai">Optional AI features</a></li>
+      <li><a href="#recipients">Recipients and transfers to third countries</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#complaint">Right to lodge a complaint</a></li>
+      <li><a href="#further">Further information</a></li>
+      <li><a href="#changes">Changes to this privacy policy</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="controller">1. Controller and contact</h2>
+  <p>The controller within the meaning of the General Data Protection Regulation (GDPR) for the processing that this policy attributes to the publisher (in particular sections 3 and 6) is:</p>
+  <div class="card">
+    <address>Lukas Körber<br>Mühlbachstraße 24<br>91281 Kirchenthumbach<br>Germany<br>
+    Email: <a href="mailto:koerber.lukas@t-online.de">koerber.lukas@t-online.de</a></address>
+  </div>
+  <p>Referred to below as "we" or "the publisher". No data protection officer has been appointed, as there is no legal obligation to do so. For any data protection question and to exercise your rights, contact us at the email address above.</p>
+
+  <h2 id="scope">2. Scope: who is responsible for what</h2>
+  <p>StudyLife is open-source software (<a href="https://github.com/lukislp/studylife">github.com/lukislp/studylife</a>) made of a server that each person or organisation runs themselves and the app that connects to such a server. This policy applies to the versions of the app distributed through Apple's App Store for iPhone, iPad, Mac and Apple Watch. Responsibilities differ:</p>
+  <ol type="a">
+    <li><strong>The app as published by the publisher on the App Store.</strong> It processes data mostly on your device and uses Apple services (App Store, notification service, Apple Health, speech recognition). The publisher receives no personal data from you through the app, with the exceptions in sections 3.10 (marketplace via GitHub) and 3.11 (voluntary crash reports via Apple). See <a href="#app">section 3</a>.</li>
+    <li><strong>Self-hosted StudyLife servers.</strong> Whoever runs the server you connect the app to is responsible for your account and all content stored there (for example study sessions, notes, courses, goals and grades) and must provide you with their own privacy policy. The publisher has no access to these servers. See <a href="#server">section 5</a>.</li>
+    <li><strong>The public demo</strong> at <code>studylife-demo.lktec.org</code>, run by the publisher. See <a href="#demo">section 6</a>.</li>
+    <li><strong>Optional AI features</strong>, which only a server's operator can set up and which send data to an external provider only after your consent. See <a href="#ai">section 7</a>.</li>
+    <li><strong>Payments</strong> do not exist in StudyLife: the app offers no purchases.</li>
+  </ol>
+
+  <h2 id="app">3. The app on your device</h2>
+
+  <h3 id="app-store">3.1 Download from the App Store</h3>
+  <p>The app is distributed through Apple's App Store. When you download it, Apple (Apple Distribution International Ltd., Ireland, or Apple Inc., USA) processes data such as your Apple ID, device data and purchase information under its own responsibility. The publisher has no influence on this. For details, see <a href="https://www.apple.com/legal/privacy/en-ww/">Apple's privacy policy</a>.</p>
+
+  <h3 id="connections">3.2 What the app connects to</h3>
+  <p>On first launch you enter the address of your StudyLife server. There is no default address. After that, the app connects only to</p>
+  <ul>
+    <li>the StudyLife server whose address you entered,</li>
+    <li>the Apple Push Notification service for notifications (<a href="#notifications">section 3.4</a>), and</li>
+    <li>GitHub's programming interface, when you open the marketplace for add-ons (<a href="#marketplace">section 3.10</a>).</li>
+  </ul>
+  <p>The app contains no third-party software for audience measurement, advertising, tracking or crash reporting and uses neither Firebase nor any comparable service. Links, for example to the self-hosting guide or to "Report a problem" (a prefilled form on GitHub with the app version, platform, browser family and language), open in your browser; nothing is sent until you submit the form there yourself, and then GitHub's privacy terms apply.</p>
+  <p>You sign in with a passkey on a sign-in page of your server, opened in a system window. There are no passwords. Confirmation with Face ID, Touch ID or the device passcode is handled by the operating system; the app receives no biometric data.</p>
+
+  <h3 id="device">3.3 What is stored on your device</h3>
+  <p>For the app to work, also without a connection, it stores the following on your device. The publisher does not receive any of it.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Item</th><th scope="col">Where</th><th scope="col">Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>Address of the chosen server</td><td>app settings</td><td>connecting on the next launch.</td></tr>
+      <tr><td>Session key of your sign-in</td><td>local storage of the embedded interface</td><td>staying signed in.</td></tr>
+      <tr><td>Cache of your data (for example courses, study sessions, notes) and changes not yet sent</td><td>local storage of the embedded interface</td><td>use without a connection; changes are sent to your server later.</td></tr>
+      <tr><td>Language, user ID, marketplace cache</td><td>local storage of the embedded interface</td><td>display and operation.</td></tr>
+      <tr><td>Summary for widgets, shortcuts and Apple Watch: study minutes today and this week, streak, current, next and recent study sessions with course and topic, weekly goal, ECTS progress, hours per course</td><td>storage shared by the app and its extensions (App Group); on Apple Watch via the connection to the iPhone</td><td>display without querying the server again.</td></tr>
+      <tr><td>Text and links shared through the share function</td><td>shared storage (App Group)</td><td>sent to your server as a note the next time you open the app.</td></tr>
+      <tr><td>Spotlight search index: titles and the first 200 characters of your notes, course names</td><td>iOS search index on the device</td><td>finding notes and courses in iOS search.</td></tr>
+      <tr><td>Only with your telemetry consent (section 3.8): random session ID and queues of events not yet sent</td><td>local storage, app data</td><td>sending to your server.</td></tr>
+      <tr><td>Helper values (for example the highest streak reached, for congratulation notifications)</td><td>app settings</td><td>display.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>When you sign out or delete your account in the app, the app removes the session key, the caches, the summary for widgets and Apple Watch and the Spotlight index from your device. All items above are also deleted when you delete the app.</p>
+  <p>The legal basis for storing and reading this information on your device is Section 25(2) no. 2 of the German TDDDG, because it is strictly necessary for the app function you requested; for the telemetry items, Section 25(1) TDDDG (your consent). Where personal data is processed in the process, this is done to provide the app (Art. 6(1)(b) GDPR).</p>
+
+  <h3 id="notifications">3.4 Notifications (push and local)</h3>
+  <p>The app asks for permission to send you notifications. Reminders that the app schedules itself are created on the device. For notifications from your server, the app receives a device token from Apple and sends it, with the device name iOS gives the app (usually the model name such as "iPhone"), to your StudyLife server, which stores both. Your server sends notifications and Live Activity updates through the Apple Push Notification service (APNs) of Apple Inc. Apple processes the device token and the content.</p>
+  <p>The content can include reminders, reports, nudges and achievements, including course names and topics; Live Activity updates contain the state of the study timer (phase, round, end time). The server's operator is responsible for the processing on the server (<a href="#server">section 5</a>). Your server deletes the device token when you disconnect from the server, when Apple reports it as invalid and when your account is deleted. You can turn notifications off at any time in the system settings.</p>
+
+  <h3 id="health">3.5 Apple Health</h3>
+  <p>When you tap "Connect Apple Health" under "Setup" in the app, iOS asks which data you want to share. Before that, the app does not access Apple Health. The app</p>
+  <ul>
+    <li><strong>reads</strong> heart rate variability (for a readiness tile, from 14 days of data), sleep analysis (sleep regularity over 30 nights), step count (a movement break nudge after about 25 minutes of focus) and VO2 max (cardio fitness trend in the statistics), and</li>
+    <li><strong>writes</strong> one "Mindful Minutes" entry for each completed focus round.</li>
+  </ul>
+  <p>The values read are evaluated and shown <strong>on your device only</strong>. They are not sent to your server, to the publisher or to any third party. Only if you have agreed to telemetry (section 3.8) does the app tell your server whether a query succeeded and whether there was enough data – without values or counts. Apple Health stores the Mindful Minutes written; whether they are synced via iCloud depends on your settings with Apple.</p>
+  <p>Health data enjoys special protection. Insofar as this involves processing of personal data by the publisher, it is based on your explicit consent (Art. 9(2)(a) and Art. 6(1)(a) GDPR, Section 25(1) TDDDG), which you give by granting access in iOS. You can withdraw it at any time, entirely or for individual data types, in the Health app or in Settings under "Privacy &amp; Security → Health". Apple Health is only available on iPhone.</p>
+
+  <h3 id="dictation">3.6 Dictating notes</h3>
+  <p>To dictate notes, the app records with the microphone and sends the recording to your StudyLife server, which converts it to text there. The operator of your server is responsible for this. If recording is not possible, the app falls back to Apple's speech recognition; Apple then processes the spoken content, depending on device, language and settings, on the device or on Apple's servers under its own responsibility. The microphone is used only while you have actively started a dictation.</p>
+
+  <h3 id="widgets">3.7 Widgets, Live Activity, Apple Watch, shortcuts and calendar files</h3>
+  <p>Widgets, the study timer's Live Activity, the Apple Watch app and the shortcuts (open the focus timer, ask for the streak, ask for today's or this week's study time, pause or resume the timer) use the summary from section 3.3. These extensions do not open network connections themselves. Pausing or resuming the timer and the quick actions on the app icon are carried out by the app itself (in the background if necessary), which sends the command to your server. If you open a calendar file (<code>.ics</code>) with StudyLife, the app reads the file to add the events to your StudyLife installation. In the background, the app occasionally refreshes its cache from your server.</p>
+
+  <h3 id="telemetry">3.8 Telemetry (only with consent, to your server)</h3>
+  <p>On first launch, StudyLife asks once whether you want to send technical measurements to improve errors and loading times. Without your agreement nothing is sent. With your agreement, the app sends <strong>to your own StudyLife server</strong> (not to the publisher): loading times, response times and status codes of requests, error kinds with a cleaned, shortened error location (without the error text), the app's memory and data usage, and crash and hang reports that iOS provides to the app via MetricKit. The events carry a random session ID that changes every 24 hours, but no user ID, no IP address and no content. You can withdraw your consent at any time in Setup (Art. 6(1)(a) GDPR, Section 25(1) TDDDG). The operator of your server is responsible for evaluating it.</p>
+
+  <h3 id="network">3.9 Local network</h3>
+  <p>Many StudyLife servers are on a home network, for example on a NAS. iOS therefore asks for permission to reach devices on the local network. The app uses this permission only to reach your StudyLife server.</p>
+
+  <h3 id="marketplace">3.10 Marketplace for add-ons (GitHub)</h3>
+  <p>When you open the marketplace in Setup, the app fetches the public list of add-ons from the repository <code>lukislp/studylife-marketplace</code> through GitHub's programming interface (<code>api.github.com</code>) and caches it for up to 24 hours. As technically necessary, GitHub, Inc. (88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) receives your IP address, date and time and the app's browser identifier. No content or account data is sent. The legal basis is our legitimate interest in showing you the add-on overview you requested (Art. 6(1)(f) GDPR). GitHub processes this data under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a> and, according to GitHub, bases transfers to the USA on the EU-U.S. Data Privacy Framework and Standard Contractual Clauses. If you do not open the marketplace, no connection to GitHub is made.</p>
+
+  <h3 id="crash-reports">3.11 Crash reports and usage statistics via Apple</h3>
+  <p>If you have turned on "Share with App Developers" in the system settings under "Privacy &amp; Security → Analytics &amp; Improvements", Apple provides the publisher with crash reports and aggregated usage statistics for the app. According to Apple, this data is only shared in a form that does not identify you. The publisher uses it only to find and fix errors. The legal basis is the consent you gave to Apple (Art. 6(1)(a) GDPR), which you can withdraw in the system settings at any time. The data is kept in App Store Connect for as long as Apple provides.</p>
+
+  <h2 id="permissions">4. App permissions</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th scope="col">Permission</th><th scope="col">What it is used for</th><th scope="col">If you decline</th></tr></thead>
+    <tbody>
+      <tr><td>Notifications</td><td>reminders, reports and timer messages (section 3.4).</td><td>The app works, without notifications.</td></tr>
+      <tr><td>Apple Health – read (iPhone only)</td><td>heart rate variability, sleep, steps and VO2 max for tiles and movement breaks; evaluated on the device only (section 3.5).</td><td>The health tiles stay empty.</td></tr>
+      <tr><td>Apple Health – write (iPhone only)</td><td>Mindful Minutes for completed focus rounds.</td><td>No entries are added to Apple Health.</td></tr>
+      <tr><td>Microphone (iPhone, iPad, Mac)</td><td>dictating notes; the recording goes to your server (section 3.6).</td><td>Dictation by recording is not possible.</td></tr>
+      <tr><td>Speech recognition</td><td>fallback dictation with Apple's speech recognition (section 3.6).</td><td>No dictation when recording is not possible.</td></tr>
+      <tr><td>Local network</td><td>connecting to a StudyLife server on your home network.</td><td>A server on the home network cannot be reached.</td></tr>
+      <tr><td>Live Activities (system setting)</td><td>showing the study timer on the lock screen.</td><td>No lock screen display.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The app does not ask for your location, camera, photos, contacts, calendars or reminders and cannot access them. It reads calendar files only when you open a file with StudyLife yourself.</p>
+
+  <h2 id="server">5. Self-hosted StudyLife servers</h2>
+  <p>The <strong>operator of the server</strong> you connect the app to is responsible for all data stored on that server – for example you yourself, a family member, a study group or an institution. Please contact that operator with questions about this data and to exercise your rights. They must provide you with their own privacy policy.</p>
+  <p>To help you understand what is typically processed there, the overview below describes the features of the software. What a particular server actually stores, for how long and with whom it shares data is decided by its operator.</p>
+  <ul>
+    <li><strong>Account:</strong> display name and passkeys (public key, device label, timestamps); no email address and no password. Sessions are stored as a hash with timestamps.</li>
+    <li><strong>Content:</strong> study sessions (course, times, topic, note), notes, courses and programmes, goals per course including optional <strong>grades</strong>, settings, timer state and notification subscriptions. If you wish, you can create a public, read-only progress link (ECTS, grade average, topic progress).</li>
+    <li><strong>Add-ons</strong> such as webhooks, Telegram, Alexa, Home Assistant, browser extensions or AI (<a href="#ai">section 7</a>) are each turned on by you; they can send data to the services you choose.</li>
+    <li><strong>Export:</strong> you can download your study sessions, notes, goals and settings as a file in the app.</li>
+  </ul>
+  <h3 id="delete-account">5.1 Deleting your account</h3>
+  <p>You can delete your account directly in the app under "Setup". For security you confirm the deletion with your passkey or a recovery code (in the app also by a sign-in no more than two minutes old); an export is offered first. The server then deletes your account with all content, passkeys, sessions, keys and notification subscriptions and instructs connected add-ons to delete your data as well. Copies in the operator's backups remain until they expire; details are in your operator's privacy policy. For the data on your device, see section 3.3.</p>
+
+  <h2 id="demo">6. Public demo (studylife-demo.lktec.org)</h2>
+  <p>At <code>studylife-demo.lktec.org</code>, the publisher runs a demo installation (controller: see <a href="#controller">section 1</a>) that you can open in a browser or by entering this address in the app. All visitors are signed in automatically to the same demo account with prepared sample data. Changes, registration, account deletion, telemetry, dictation and AI features are switched off there.</p>
+  <h3 id="demo-delivery">6.1 Delivery via Cloudflare and hosting</h3>
+  <p>The demo is reached through the Cloudflare network (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Cloudflare accepts every connection, processes as a processor, as technically necessary, your IP address, date and time, the requested address, the browser identifier and connection characteristics, protects the demo against attacks and forwards the request encrypted to the server. Beyond this technically necessary, short-lived processing for security, Cloudflare keeps no access logs and produces no analytics for us; additional features such as Web Analytics or Logpush are not turned on. According to Cloudflare, it bases transfers to the USA on its certification under the EU-U.S. Data Privacy Framework and on the European Commission's Standard Contractual Clauses.</p>
+  <p>The demo's server is a virtual server at Hostinger International Ltd. (Cyprus), acting as a processor. The server is located in a data centre in Germany; hosting involves no transfer of data to third countries.</p>
+  <p>The legal basis is our legitimate interest in presenting the software publicly and securely (Art. 6(1)(f) GDPR). The standard data processing agreements of both providers under Art. 28 GDPR apply: for Cloudflare its <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Data Processing Addendum</a>, which forms part of Cloudflare's terms, and for Hostinger its <a href="https://www.hostinger.com/legal/dpa">Data Processing Addendum</a>, which supplements Hostinger's terms of service and covers VPS services.</p>
+  <h3 id="demo-storage">6.2 What the demo stores about you</h3>
+  <p>The demo stores <strong>neither your IP address nor your browser identifier</strong>: the web server in front of the demo writes no access log, and StudyLife itself does not log this information. For protective limits, the IP address is used in memory only. For each visit, the demo creates a sign-in session (a hash of the session key and timestamps). These sessions are deleted at the regular reset of the demo, which takes place at least once a week and rebuilds all demo data. In your browser or in the app, the demo stores the session key, caches and the language in local storage (Section 25(2) no. 2 TDDDG); it sets no cookies. The legal basis is Art. 6(1)(f) GDPR (see above).</p>
+
+  <h2 id="ai">7. Optional AI features</h2>
+  <p>The operator of a StudyLife server can set up an AI assistant (the "studylife-ai" add-on) that answers questions about your study content, enriches notes and carries out tasks. Which models are used is decided by the operator alone.</p>
+  <ul>
+    <li><strong>Data sent:</strong> your notes (title and content), courses (name, code, semester, ECTS, group, topics), study sessions of the last five years (course, times, status, topic, note) and goals (target date, <strong>grade</strong>, completion date and topics, completion note, tag). This content is regularly transferred to the AI service and converted into vectors there with an embedding model; with every question, your message and matching excerpts go to the language model.</li>
+    <li><strong>Possible recipients:</strong> the provider chosen by the operator, for example OpenAI, Anthropic, Google, Mistral, Microsoft Azure or another provider connected via LiteLLM, or a locally run model (for example Ollama), in which case no data goes to third parties.</li>
+    <li><strong>Consent:</strong> before any data goes to an external provider, StudyLife shows you the provider, the models and the data shared, and asks for your explicit consent (Art. 6(1)(a) GDPR). The consent applies only to these providers and models; if the operator changes them, you are asked again. Consent is only not required if the operator declares that all models run locally.</li>
+    <li><strong>Withdrawal and deletion:</strong> you can withdraw your consent at any time in Setup. The AI service's access is then revoked and your data there is deleted; the same happens when your account is deleted. The AI service keeps conversation states for up to 30 days. How long the external provider keeps data depends on its terms.</li>
+    <li><strong>Third countries:</strong> several of these providers are based in the USA. The transfer, its legal basis and the safeguards are described by the operator in their privacy policy.</li>
+  </ul>
+  <p>The operator of your server is responsible for this processing. The publisher receives none of this data. AI is switched off in the public demo.</p>
+
+  <h2 id="recipients">8. Recipients and transfers to third countries</h2>
+  <p>For the processing the publisher is responsible for, data is received only by:</p>
+  <ul>
+    <li><strong>Apple</strong> (Apple Distribution International Ltd., Ireland; Apple Inc., USA) for the App Store, the notification service and voluntary crash reports, each under its own responsibility or as provider of the service;</li>
+    <li><strong>GitHub, Inc.</strong> (USA) when you open the marketplace, with the safeguards named in section 3.10;</li>
+    <li><strong>Cloudflare, Inc.</strong> (USA) as a processor for the demo, with the safeguards named in section 6.1;</li>
+    <li><strong>Hostinger International Ltd.</strong> (Cyprus) as a processor for the demo server, which is located in Germany.</li>
+  </ul>
+  <p>We do not sell data and do not share it for advertising. Data is only disclosed to authorities where we are legally obliged to do so.</p>
+
+  <h2 id="rights">9. Your rights</h2>
+  <p>Under the GDPR you have the right to</p>
+  <ul>
+    <li>access the data stored about you (Art. 15),</li>
+    <li>rectification of inaccurate data (Art. 16),</li>
+    <li>erasure (Art. 17),</li>
+    <li>restriction of processing (Art. 18),</li>
+    <li>data portability (Art. 20),</li>
+    <li>withdraw consent with effect for the future (Art. 7(3)); this does not affect the lawfulness of processing carried out before the withdrawal.</li>
+  </ul>
+  <div class="card note">
+    <p><strong>Right to object (Art. 21 GDPR).</strong> Where we process data on the basis of our legitimate interest (Art. 6(1)(f) GDPR), you can object at any time on grounds relating to your particular situation. We will then no longer process the data unless we can demonstrate compelling legitimate grounds.</p>
+  </div>
+  <p>For processing by the publisher (sections 3 and 6), contact the email address in <a href="#controller">section 1</a>. Because the demo stores nothing that would let us recognise you, we usually cannot match a request about a demo visit to any record (Art. 11 GDPR). For data on a self-hosted server, contact its operator.</p>
+
+  <h2 id="complaint">10. Right to lodge a complaint</h2>
+  <p>You have the right to lodge a complaint with a data protection supervisory authority, in particular in the Member State of your habitual residence, place of work or place of the alleged infringement (Art. 77 GDPR). The authority competent for the publisher is:</p>
+  <div class="card">
+    <address>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br>Promenade 18<br>91522 Ansbach, Germany<br><a href="https://www.lda.bayern.de">www.lda.bayern.de</a></address>
+  </div>
+
+  <h2 id="further">11. Further information</h2>
+  <dl class="facts">
+    <dt>Obligation to provide data</dt>
+    <dd>You are not obliged to provide any data. Without a connection to a server, however, the app cannot be used; without the relevant permission, the related features are not available.</dd>
+    <dt>Automated decisions</dt>
+    <dd>There is no automated decision-making, including profiling, within the meaning of Art. 22 GDPR. Tiles, nudges and the AI assistant's answers are information for you, not decisions.</dd>
+    <dt>Children</dt>
+    <dd>The app is intended for students and learners. It is not specifically intended for children; the publisher does not knowingly collect data from children through the app.</dd>
+    <dt>Security</dt>
+    <dd>Sign-in uses passkeys; there are no passwords. How your own server is secured is the responsibility of its operator.</dd>
+  </dl>
+
+  <h2 id="changes">12. Changes to this privacy policy</h2>
+  <p>We update this privacy policy when the app, the demo or the law changes. The version published here applies; the version and date are shown at the top. Every earlier version and every change can be traced in the <a href="https://github.com/lukislp/legal/commits/main">change history</a>. This English version is a translation; the German version is binding.</p>
+</main>
+<footer class="site-footer">
+  <ul>
+    <li><a href="https://lktec.org/en/imprint">Legal notice</a></li>
+    <li><a href="https://github.com/lukislp/legal/commits/main">Change history</a></li>
+    <li><a href="/studylife/" hreflang="de">Deutsche Fassung</a></li>
+  </ul>
+</footer>
+</body>
+</html>
