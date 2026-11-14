@@ -24,7 +24,7 @@
 </header>
 <main id="inhalt">
   <h1>Datenschutzerklärung für die App StudyLife</h1>
-  <p class="meta">Version 1.0 · Stand: 14. November 2026</p>
+  <p class="meta">Version 1.1 · Stand: 14. November 2026</p>
 
   <div class="card note">
     <p><strong>Kurzfassung.</strong> StudyLife ist eine App für eine selbst betriebene Server-Software zum Planen und Erfassen des Studiums. Die App enthält keine Analyse-, Werbe-, Tracking- oder Absturzbericht-Software von Dritten und sendet Ihre Daten nur an den StudyLife-Server, dessen Adresse Sie eingeben, sowie an Apple für Mitteilungen. Für die Daten auf diesem Server ist dessen Betreiber verantwortlich, nicht der Herausgeber der App. Daten aus Apple Health werden ausschließlich auf Ihrem Gerät ausgewertet und verlassen es nicht.</p>
@@ -78,7 +78,7 @@
     <li>mit der Programmierschnittstelle von GitHub, wenn Sie den Marktplatz für Erweiterungen öffnen (<a href="#marktplatz">Abschnitt 3.10</a>).</li>
   </ul>
   <p>Die App enthält keine Software zur Reichweitenmessung, Werbung, Nachverfolgung (Tracking) oder Absturzberichterstattung von Dritten und nutzt weder Firebase noch vergleichbare Dienste. Links, etwa zur Anleitung für den eigenen Server oder zu „Problem melden“ (ein vorausgefülltes Formular auf GitHub mit App-Version, Plattform, Browser-Familie und Sprache), öffnen sich in Ihrem Browser; es wird erst etwas übermittelt, wenn Sie das Formular dort selbst absenden, und dann gelten die Datenschutzbestimmungen von GitHub.</p>
-  <p>Die Anmeldung erfolgt mit einem Passkey auf einer Anmeldeseite Ihres Servers, die in einem Systemfenster geöffnet wird. Passwörter gibt es nicht. Die Bestätigung mit Face ID, Touch ID oder Gerätecode übernimmt das Betriebssystem; die App erhält keine biometrischen Daten.</p>
+  <p>Die Anmeldung erfolgt auf einer Anmeldeseite Ihres Servers, die in einem Systemfenster geöffnet wird, mit einem Passkey oder, wenn der Betreiber es zulässt, mit Benutzername und Passwort. Das Passwort wird an Ihren Server übertragen und dort nur als gesalzener, langsam berechneter Prüfwert (PBKDF2) gespeichert, nie im Klartext; die App speichert es nicht. Die Bestätigung mit Face ID, Touch ID oder Gerätecode übernimmt das Betriebssystem; die App erhält keine biometrischen Daten.</p>
 
   <h3 id="geraet">3.3 Was auf Ihrem Gerät gespeichert wird</h3>
   <p>Damit die App funktioniert und auch ohne Verbindung nutzbar ist, speichert sie folgende Angaben auf Ihrem Gerät. Der Herausgeber erhält diese Angaben nicht.</p>
@@ -153,13 +153,13 @@
   <p>Für alle Daten, die auf dem Server gespeichert werden, mit dem Sie die App verbinden, ist der <strong>Betreiber dieses Servers</strong> verantwortlich – etwa Sie selbst, ein Familienmitglied, eine Lerngruppe oder eine Einrichtung. Bitte wenden Sie sich mit Fragen zu diesen Daten und zur Ausübung Ihrer Rechte an diesen Betreiber. Er muss Ihnen eine eigene Datenschutzerklärung bereitstellen.</p>
   <p>Damit Sie einschätzen können, was dort typischerweise verarbeitet wird, beschreibt die folgende Übersicht den Funktionsumfang der Software. Was ein bestimmter Server tatsächlich speichert, wie lange und an wen er Daten weitergibt, legt sein Betreiber fest.</p>
   <ul>
-    <li><strong>Konto:</strong> Anzeigename und Passkeys (öffentlicher Schlüssel, Gerätebezeichnung, Zeitpunkte); keine E-Mail-Adresse und kein Passwort. Sitzungen werden als Prüfwert mit Zeitpunkten gespeichert.</li>
+    <li><strong>Konto:</strong> Anzeigename und Passkeys (öffentlicher Schlüssel, Gerätebezeichnung, Zeitpunkte); wenn Sie ein Passwort festlegen, Ihr Benutzername und ein Prüfwert des Passworts (nicht das Passwort selbst) mit Zeitpunkten und einem Zähler fehlgeschlagener Anmeldeversuche; keine E-Mail-Adresse. Sitzungen werden als Prüfwert mit Zeitpunkten gespeichert.</li>
     <li><strong>Inhalte:</strong> Lerneinheiten (Kurs, Zeiten, Thema, Notiz), Notizen, Kurse und Studiengänge, Ziele je Kurs einschließlich optionaler <strong>Noten</strong>, Einstellungen, Timer-Stand und Mitteilungsabonnements. Auf Wunsch erstellen Sie einen öffentlichen, nur lesbaren Fortschrittslink (ECTS, Notendurchschnitt, Themenfortschritt).</li>
     <li><strong>Erweiterungen</strong> wie Webhooks, Telegram, Alexa, Home Assistant, Browser-Erweiterungen oder KI (<a href="#ki">Abschnitt 7</a>) aktivieren Sie einzeln selbst; sie können Daten an die von Ihnen gewählten Dienste senden.</li>
     <li><strong>Export:</strong> Sie können Ihre Lerneinheiten, Notizen, Ziele und Einstellungen in der App als Datei herunterladen.</li>
   </ul>
   <h3 id="konto-loeschen">5.1 Konto löschen</h3>
-  <p>Sie können Ihr Konto direkt in der App unter „Einrichtung“ löschen. Zur Sicherheit bestätigen Sie die Löschung mit Ihrem Passkey oder einem Wiederherstellungscode (in der App auch durch eine Anmeldung, die höchstens zwei Minuten zurückliegt); vorher wird Ihnen ein Export angeboten. Der Server löscht dann Ihr Konto mit allen Inhalten, Passkeys, Sitzungen, Schlüsseln und Mitteilungsabonnements und beauftragt angeschlossene Erweiterungen, Ihre Daten ebenfalls zu löschen. Kopien in Sicherungen des Betreibers bleiben bis zu deren Ablauf erhalten; Einzelheiten nennt die Datenschutzerklärung Ihres Betreibers. Zu den Daten auf Ihrem Gerät siehe Abschnitt 3.3.</p>
+  <p>Sie können Ihr Konto direkt in der App unter „Einrichtung“ löschen. Zur Sicherheit bestätigen Sie die Löschung mit Ihrem Passkey, Ihrem Passwort oder einem Wiederherstellungscode (in der App auch durch eine Anmeldung, die höchstens zwei Minuten zurückliegt); vorher wird Ihnen ein Export angeboten. Der Server löscht dann Ihr Konto mit allen Inhalten, Passkeys, Passwort, Sitzungen, Schlüsseln und Mitteilungsabonnements und beauftragt angeschlossene Erweiterungen, Ihre Daten ebenfalls zu löschen. Kopien in Sicherungen des Betreibers bleiben bis zu deren Ablauf erhalten; Einzelheiten nennt die Datenschutzerklärung Ihres Betreibers. Zu den Daten auf Ihrem Gerät siehe Abschnitt 3.3.</p>
 
   <h2 id="demo">6. Öffentliche Demo (studylife-demo.lktec.org)</h2>
   <p>Unter <code>studylife-demo.lktec.org</code> betreibt der Herausgeber eine Demo-Installation (Verantwortlicher: siehe <a href="#verantwortlicher">Abschnitt 1</a>), die Sie im Browser oder durch Eingabe dieser Adresse in der App aufrufen können. Alle Besucher werden automatisch als dasselbe Demo-Konto mit vorbereiteten Beispieldaten angemeldet. Änderungen, eine Registrierung, Kontolöschung, Telemetrie, Diktat und KI-Funktionen sind dort abgeschaltet.</p>
@@ -221,7 +221,7 @@
     <dt>Kinder</dt>
     <dd>Die App richtet sich an Studierende und Lernende. Sie ist nicht speziell für Kinder bestimmt; der Herausgeber erhebt über die App wissentlich keine Daten von Kindern.</dd>
     <dt>Sicherheit</dt>
-    <dd>Die Anmeldung erfolgt mit Passkeys; Passwörter gibt es nicht. Wie Ihr eigener Server abgesichert ist, liegt in der Verantwortung seines Betreibers.</dd>
+    <dd>Die Anmeldung erfolgt mit Passkeys oder, wenn der Betreiber es zulässt, mit Benutzername und Passwort; Passwörter werden nur als gesalzener Prüfwert gespeichert, und wiederholte Fehlversuche sperren die Passwort-Anmeldung vorübergehend. Wie Ihr eigener Server abgesichert ist, liegt in der Verantwortung seines Betreibers.</dd>
   </dl>
 
   <h2 id="aenderungen">12. Änderungen dieser Datenschutzerklärung</h2>

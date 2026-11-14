@@ -24,7 +24,7 @@
 </header>
 <main id="content">
   <h1>Privacy policy for the StudyLife app</h1>
-  <p class="meta">Version 1.0 · Last updated: 14 November 2026</p>
+  <p class="meta">Version 1.1 · Last updated: 14 November 2026</p>
 
   <div class="card note">
     <p><strong>In short.</strong> StudyLife is an app for self-hosted server software for planning and tracking your studies. The app contains no third-party analytics, advertising, tracking or crash-reporting software and sends your data only to the StudyLife server whose address you enter, and to Apple for notifications. The operator of that server, not the publisher of the app, is responsible for the data stored there. Data from Apple Health is evaluated on your device only and never leaves it.</p>
@@ -78,7 +78,7 @@
     <li>GitHub's programming interface, when you open the marketplace for add-ons (<a href="#marketplace">section 3.10</a>).</li>
   </ul>
   <p>The app contains no third-party software for audience measurement, advertising, tracking or crash reporting and uses neither Firebase nor any comparable service. Links, for example to the self-hosting guide or to "Report a problem" (a prefilled form on GitHub with the app version, platform, browser family and language), open in your browser; nothing is sent until you submit the form there yourself, and then GitHub's privacy terms apply.</p>
-  <p>You sign in with a passkey on a sign-in page of your server, opened in a system window. There are no passwords. Confirmation with Face ID, Touch ID or the device passcode is handled by the operating system; the app receives no biometric data.</p>
+  <p>You sign in on a sign-in page of your server, opened in a system window, with a passkey or, if the operator allows it, with a username and password. The password is sent to your server and stored there only as a salted, deliberately slow hash (PBKDF2), never in plain text; the app does not store it. Confirmation with Face ID, Touch ID or the device passcode is handled by the operating system; the app receives no biometric data.</p>
 
   <h3 id="device">3.3 What is stored on your device</h3>
   <p>For the app to work, also without a connection, it stores the following on your device. The publisher does not receive any of it.</p>
@@ -153,13 +153,13 @@
   <p>The <strong>operator of the server</strong> you connect the app to is responsible for all data stored on that server – for example you yourself, a family member, a study group or an institution. Please contact that operator with questions about this data and to exercise your rights. They must provide you with their own privacy policy.</p>
   <p>To help you understand what is typically processed there, the overview below describes the features of the software. What a particular server actually stores, for how long and with whom it shares data is decided by its operator.</p>
   <ul>
-    <li><strong>Account:</strong> display name and passkeys (public key, device label, timestamps); no email address and no password. Sessions are stored as a hash with timestamps.</li>
+    <li><strong>Account:</strong> display name and passkeys (public key, device label, timestamps); if you set a password, your username and a hash of the password (not the password itself) with timestamps and a count of failed sign-in attempts; no email address. Sessions are stored as a hash with timestamps.</li>
     <li><strong>Content:</strong> study sessions (course, times, topic, note), notes, courses and programmes, goals per course including optional <strong>grades</strong>, settings, timer state and notification subscriptions. If you wish, you can create a public, read-only progress link (ECTS, grade average, topic progress).</li>
     <li><strong>Add-ons</strong> such as webhooks, Telegram, Alexa, Home Assistant, browser extensions or AI (<a href="#ai">section 7</a>) are each turned on by you; they can send data to the services you choose.</li>
     <li><strong>Export:</strong> you can download your study sessions, notes, goals and settings as a file in the app.</li>
   </ul>
   <h3 id="delete-account">5.1 Deleting your account</h3>
-  <p>You can delete your account directly in the app under "Setup". For security you confirm the deletion with your passkey or a recovery code (in the app also by a sign-in no more than two minutes old); an export is offered first. The server then deletes your account with all content, passkeys, sessions, keys and notification subscriptions and instructs connected add-ons to delete your data as well. Copies in the operator's backups remain until they expire; details are in your operator's privacy policy. For the data on your device, see section 3.3.</p>
+  <p>You can delete your account directly in the app under "Setup". For security you confirm the deletion with your passkey, your password or a recovery code (in the app also by a sign-in no more than two minutes old); an export is offered first. The server then deletes your account with all content, passkeys, password, sessions, keys and notification subscriptions and instructs connected add-ons to delete your data as well. Copies in the operator's backups remain until they expire; details are in your operator's privacy policy. For the data on your device, see section 3.3.</p>
 
   <h2 id="demo">6. Public demo (studylife-demo.lktec.org)</h2>
   <p>At <code>studylife-demo.lktec.org</code>, the publisher runs a demo installation (controller: see <a href="#controller">section 1</a>) that you can open in a browser or by entering this address in the app. All visitors are signed in automatically to the same demo account with prepared sample data. Changes, registration, account deletion, telemetry, dictation and AI features are switched off there.</p>
@@ -221,7 +221,7 @@
     <dt>Children</dt>
     <dd>The app is intended for students and learners. It is not specifically intended for children; the publisher does not knowingly collect data from children through the app.</dd>
     <dt>Security</dt>
-    <dd>Sign-in uses passkeys; there are no passwords. How your own server is secured is the responsibility of its operator.</dd>
+    <dd>Sign-in uses passkeys or, if the operator allows it, a username and password; passwords are stored only as a salted hash, and repeated failed attempts temporarily lock password sign-in. How your own server is secured is the responsibility of its operator.</dd>
   </dl>
 
   <h2 id="changes">12. Changes to this privacy policy</h2>
