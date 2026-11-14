@@ -14,6 +14,8 @@ Standard library only. Usage: python3 scripts/check.py [site root]
 
 from __future__ import annotations
 
+FAVICON = "/assets/favicon.svg"
+
 import re
 import sys
 from html.parser import HTMLParser
@@ -59,6 +61,7 @@ class Page(HTMLParser):
         self.footer_links: list[str] = []
         self.css_urls: list[str] = []
         self._in_style = False
+        self.has_favicon = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         a = {k: (v or "") for k, v in attrs}
@@ -94,6 +97,8 @@ class Page(HTMLParser):
                 self.hrefs.append(href)
             else:
                 self.resources.append(href)
+            if "icon" in rel and href == FAVICON:
+                self.has_favicon = True
         for attr in RESOURCE_ATTRS.get(tag, ()):
             if a.get(attr):
                 self.resources.append(a[attr])
@@ -168,6 +173,8 @@ def check(root: Path) -> list[str]:
             errors.append(f"{rel}: empty or missing <title>")
         if not p.has_skip:
             errors.append(f"{rel}: no skip link (<a class=\"skip\" href=\"#...\">)")
+        if not p.has_favicon:
+            errors.append(f"{rel}: no favicon link (<link rel=\"icon\" href=\"{FAVICON}\">)")
         path = url_path(page, root)
         other = counterpart(path, lang)
         if other not in known:
