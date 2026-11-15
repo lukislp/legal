@@ -2,14 +2,14 @@
 
 Legal texts for the apps published by Lukas Körber (GitHub: lukislp), served at
 **https://legal.lktec.org**. Today these are the privacy policies of the iOS apps
-MowDeck and StudyLife, in German (primary) and English.
+MowDeck and StudyAtrium, in German (primary) and English.
 
 The legal notice (Impressum) is not part of this repository; it lives at
 https://lktec.org/impressum (English: https://lktec.org/en/imprint).
 
 ## Scope: who is responsible for what
 
-MowDeck and StudyLife are self-hosted software. The texts here cover what the
+MowDeck and StudyAtrium are self-hosted software. The texts here cover what the
 publisher of the apps is responsible for: the apps as distributed through the
 App Store, and the public demo instances he operates.
 
@@ -18,8 +18,8 @@ the server a user connects to is the controller for the account and content data
 stored there and must publish their own privacy policy for it. These texts do
 not replace that policy. MowDeck ships a starting template for operators at
 [`apps/web/static/legal/privacy.md`](https://github.com/lukislp/mowdeck/blob/main/apps/web/static/legal/privacy.md).
-StudyLife does not have such a template yet; once it exists in the studylife
-repository, link it from section 5 of both StudyLife policies (to do).
+StudyAtrium does not have such a template yet; once it exists in the studylife
+repository, link it from section 5 of both StudyAtrium policies (to do).
 
 ## Structure
 
