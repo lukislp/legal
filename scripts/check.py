@@ -4,7 +4,9 @@
 Fails when a page
 - has no lang attribute (de or en), no title or no skip link,
 - has no language switch pointing at its counterpart page in the other language,
-- misses the footer links (imprint in the page language, change history),
+- misses the footer links (imprint and website privacy notice in the page language,
+  change history),
+- misses one of the stable anchors other sites and the apps link to (STABLE_ANCHORS),
 - links to an internal page or file that does not exist,
 - loads anything from another host (script, stylesheet, image, frame, media, font),
 - still contains an open-point marker (data-todo, TODO, OFFEN:, OPEN:).
@@ -25,7 +27,19 @@ IMPRINT = {
     "de": "https://lktec.org/impressum",
     "en": "https://lktec.org/en/imprint",
 }
+# Privacy notice for this website itself (GitHub Pages), linked from every footer.
+PRIVACY = {
+    "de": "/#diese-website",
+    "en": "/en/#this-website",
+}
 HISTORY = "https://github.com/lukislp/legal/commits/main"
+# Anchors that are linked from outside this repository (apps, other sites); the same id in
+# both languages so a link can switch language without changing the fragment.
+STUDYATRIUM_ANCHORS = ("instances", "review-instance", "own-use", "website")
+STABLE_ANCHORS = {
+    "studylife/index.html": STUDYATRIUM_ANCHORS,
+    "en/studylife/index.html": STUDYATRIUM_ANCHORS,
+}
 SKIP_DIRS = {".git", ".github", "scripts", "node_modules"}
 # Attributes that make the browser fetch something on its own.
 RESOURCE_ATTRS = {
@@ -183,6 +197,11 @@ def check(root: Path) -> list[str]:
             errors.append(f"{rel}: language switch does not link to {other}")
         if IMPRINT[lang] not in p.footer_links:
             errors.append(f"{rel}: footer misses the imprint link {IMPRINT[lang]}")
+        if PRIVACY[lang] not in p.footer_links:
+            errors.append(f"{rel}: footer misses the website privacy link {PRIVACY[lang]}")
+        for anchor in STABLE_ANCHORS.get(rel, ()):
+            if anchor not in p.ids:
+                errors.append(f"{rel}: stable anchor #{anchor} is missing")
         if HISTORY not in p.footer_links:
             errors.append(f"{rel}: footer misses the change history link {HISTORY}")
         for res in p.resources + p.css_urls:
