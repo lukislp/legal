@@ -11,7 +11,8 @@ https://lktec.org/impressum (English: https://lktec.org/en/imprint).
 
 MowDeck and StudyAtrium are self-hosted software. The texts here cover what the
 publisher of the apps is responsible for: the apps as distributed through the
-App Store, and the public demo instances he operates.
+App Store, the public demo instances he operates, and (StudyAtrium) the review
+instance used only for Apple's App Review. He offers no hosted service to others.
 
 **Every self-hosted server installation is run by its own operator.** Whoever runs
 the server a user connects to is the controller for the account and content data
@@ -52,8 +53,10 @@ no cookies, no JavaScript.
    ```
 
    It fails on a page without `lang`, title, skip link, language switch or
-   footer links, on a broken internal link, on any resource loaded from
-   another host, and on open-point markers (`data-todo`, `TODO`, `OFFEN:`,
+   footer links (imprint, privacy notice of this website, change history), on
+   a missing stable anchor (`STABLE_ANCHORS`: section ids that the apps or
+   other sites link to, the same in both languages), on a broken internal
+   link, on any resource loaded from another host, and on open-point markers (`data-todo`, `TODO`, `OFFEN:`,
    `OPEN:`). Mark anything still to be decided with such a marker: the check
    then blocks the pull request until it is resolved.
 4. Open a pull request. The commit history of `main` is the public change log
