@@ -40,6 +40,8 @@ STABLE_ANCHORS = {
     "studyatrium/index.html": STUDYATRIUM_ANCHORS,
     "en/studyatrium/index.html": STUDYATRIUM_ANCHORS,
 }
+# Served for any unknown address, so it has no counterpart page and no language switch.
+NOT_FOUND_PAGE = "404.html"
 SKIP_DIRS = {".git", ".github", "scripts", "node_modules"}
 # Attributes that make the browser fetch something on its own.
 RESOURCE_ATTRS = {
@@ -213,9 +215,11 @@ def check(root: Path) -> list[str]:
                 errors.append(f"{rel}: forwarding page needs a visible link to {p.refresh}")
             continue
         other = counterpart(path, lang)
-        if other not in known:
+        if rel == NOT_FOUND_PAGE:
+            other = ""
+        if other and other not in known:
             errors.append(f"{rel}: counterpart page {other} does not exist")
-        if other not in p.switch_links:
+        if other and other not in p.switch_links:
             errors.append(f"{rel}: language switch does not link to {other}")
         if IMPRINT[lang] not in p.footer_links:
             errors.append(f"{rel}: footer misses the imprint link {IMPRINT[lang]}")

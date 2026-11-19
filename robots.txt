@@ -1,0 +1,29 @@
+# Search engines are welcome; training AI models on this site is not.
+# Content signals (contentsignals.org): search yes, AI training no, AI answers may reference.
+
+User-agent: *
+Content-Signal: search=yes,ai-train=no,use=reference
+Allow: /
+
+# AI training crawlers
+User-agent: Amazonbot
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: Google-Extended
+User-agent: Google-CloudVertexBot
+User-agent: GoogleOther
+User-agent: GPTBot
+User-agent: meta-externalagent
+User-agent: MistralAI-Training
+User-agent: omgili
+User-agent: PetalBot
+User-agent: KimiBot
+Disallow: /
+
+Sitemap: https://legal.lktec.org/sitemap.xml
