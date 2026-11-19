@@ -37,8 +37,8 @@ HISTORY = "https://github.com/lukislp/legal/commits/main"
 # both languages so a link can switch language without changing the fragment.
 STUDYATRIUM_ANCHORS = ("instances", "review-instance", "own-use", "website")
 STABLE_ANCHORS = {
-    "studylife/index.html": STUDYATRIUM_ANCHORS,
-    "en/studylife/index.html": STUDYATRIUM_ANCHORS,
+    "studyatrium/index.html": STUDYATRIUM_ANCHORS,
+    "en/studyatrium/index.html": STUDYATRIUM_ANCHORS,
 }
 SKIP_DIRS = {".git", ".github", "scripts", "node_modules"}
 # Attributes that make the browser fetch something on its own.
@@ -76,6 +76,9 @@ class Page(HTMLParser):
         self.css_urls: list[str] = []
         self._in_style = False
         self.has_favicon = False
+        self.refresh = ""
+        self.canonical = ""
+        self.noindex = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         a = {k: (v or "") for k, v in attrs}
@@ -104,9 +107,17 @@ class Page(HTMLParser):
                 self.switch_links.append(href)
             if self._in_footer:
                 self.footer_links.append(href)
+        if tag == "meta":
+            if a.get("http-equiv", "").lower() == "refresh":
+                m = re.search(r"url=(\S+)", a.get("content", ""), re.IGNORECASE)
+                self.refresh = m.group(1) if m else "?"
+            if a.get("name", "").lower() == "robots" and "noindex" in a.get("content", ""):
+                self.noindex = True
         if tag == "link":
             rel = a.get("rel", "").lower().split()
             href = a.get("href", "")
+            if "canonical" in rel:
+                self.canonical = href
             if "alternate" in rel or "canonical" in rel:
                 self.hrefs.append(href)
             else:
@@ -185,11 +196,22 @@ def check(root: Path) -> list[str]:
             errors.append(f"{rel}: lang {lang!r} does not match its folder ({expected_lang})")
         if not p.title.strip():
             errors.append(f"{rel}: empty or missing <title>")
-        if not p.has_skip:
+        if not p.has_skip and not p.refresh:
             errors.append(f"{rel}: no skip link (<a class=\"skip\" href=\"#...\">)")
         if not p.has_favicon:
             errors.append(f"{rel}: no favicon link (<link rel=\"icon\" href=\"{FAVICON}\">)")
         path = url_path(page, root)
+        if p.refresh:
+            # Forwarding page for a moved URL: only the redirect itself is checked.
+            if p.refresh not in known:
+                errors.append(f"{rel}: forwarding target {p.refresh} does not exist")
+            if p.canonical != "https://legal.lktec.org" + p.refresh:
+                errors.append(f"{rel}: canonical link must be https://legal.lktec.org{p.refresh}")
+            if not p.noindex:
+                errors.append(f"{rel}: forwarding page needs <meta name=\"robots\" content=\"noindex\">")
+            if p.refresh not in p.hrefs:
+                errors.append(f"{rel}: forwarding page needs a visible link to {p.refresh}")
+            continue
         other = counterpart(path, lang)
         if other not in known:
             errors.append(f"{rel}: counterpart page {other} does not exist")

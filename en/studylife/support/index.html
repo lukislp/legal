@@ -3,86 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StudyAtrium support – lktec.org</title>
-<meta name="description" content="Support for the StudyAtrium app: contact, setup guide, bug reports and answers to common questions.">
+<title>Moved – StudyAtrium – lktec.org</title>
+<meta http-equiv="refresh" content="0; url=/en/studyatrium/support/">
+<link rel="canonical" href="https://legal.lktec.org/en/studyatrium/support/">
+<meta name="robots" content="noindex">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="alternate" hreflang="de" href="/studylife/support/">
+<script>if (location.hash) location.replace("/en/studyatrium/support/" + location.hash);</script>
 </head>
 <body>
-<a class="skip" href="#content">Skip to content</a>
-<header class="site-header">
-  <a class="brand" href="/en/">lktec.org <span>· Legal</span></a>
-  <nav aria-label="Language">
-    <ul class="lang-switch">
-      <li><a href="/studylife/support/" hreflang="de" lang="de">DE</a></li>
-      <li><span aria-current="page" lang="en">EN</span></li>
-    </ul>
-  </nav>
-</header>
 <main id="content">
-  <h1>Support for StudyAtrium</h1>
-  <p class="lead">StudyAtrium is an app for a server that you or someone you know runs. This page tells you where to get help.</p>
-
-  <nav class="toc" aria-label="Contents">
-    <ol>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#help">Setup guide and bug reports</a></li>
-      <li><a href="#faq">Frequently asked questions</a></li>
-    </ol>
-  </nav>
-
-  <h2 id="contact">Contact</h2>
-  <div class="card">
-    <address>Lukas Körber<br>
-    Email: <a href="mailto:koerber.lukas@t-online.de">koerber.lukas@t-online.de</a></address>
-  </div>
-  <p>Write to this address for questions about the app, for problems you cannot solve with the guide below and for data protection requests (see the <a href="/en/studylife/">privacy policy</a>). Please include the app version (Setup, "About"), your device and iOS version and, if you know it, the version of your server. Do not send passwords, recovery codes or the content of your account. The legal notice is at <a href="https://lktec.org/en/imprint">lktec.org/en/imprint</a>.</p>
-  <p>The publisher runs no StudyAtrium server for others. If something is wrong with the data on your server, with its availability or with its privacy policy, the operator of your server is the right contact.</p>
-
-  <h2 id="help">Setup guide and bug reports</h2>
-  <ul>
-    <li><a href="https://github.com/lukislp/studylife#deployment">Setup guide</a>: how to run your own StudyAtrium server and connect the app to it.</li>
-    <li><a href="https://github.com/lukislp/studylife/issues">GitHub Issues</a>: report a bug or ask for a feature. This is public: do not post personal data, passwords or server addresses you want to keep private. A GitHub account is required.</li>
-    <li><a href="https://github.com/lukislp/studylife">Source code and documentation</a> of the server and the apps.</li>
-  </ul>
-
-  <h2 id="faq">Frequently asked questions</h2>
-
-  <h3 id="needs-server">What do I need to use the app?</h3>
-  <p>A StudyAtrium server of your own (or one run by someone who gave you access). There is no central StudyAtrium service and no account with the publisher. On first launch you enter the address of your server and sign in there; the app connects only to that server (and to Apple for notifications). Without a server the app cannot be used. The <a href="https://github.com/lukislp/studylife#deployment">setup guide</a> explains how to set one up.</p>
-
-  <h3 id="demo">Can I try it without my own server?</h3>
-  <p>Yes: enter <code>studylife-demo.lktec.org</code> as the server address. It is a public, read-only demo with sample data; changes, registration and account deletion are switched off. Details are in <a href="/en/studylife/#demo">section 6 of the privacy policy</a>.</p>
-
-  <h3 id="data">Where is my data and who can see it?</h3>
-  <p>On your server and, as a cache, on your device. The operator of the server is responsible for it, the publisher of the app receives none of it. See the <a href="/en/studylife/">privacy policy</a>.</p>
-
-  <h3 id="push">Do I get push notifications with a self-hosted server?</h3>
-  <p>Not from your server. Apple only accepts push messages for this app that are signed with a key held by the publisher, and that key is deployed only on the instance used for Apple's App Review. A server that you run yourself therefore cannot send push notifications or remote Live Activity updates to the App Store version of the app. This is a limit of Apple's push system, not a setting you missed.</p>
-  <p>What you do get with a self-hosted server:</p>
-  <ul>
-    <li>Reminders that the app schedules itself on your device (for example for planned study sessions), also without a connection to the server, as long as you allowed notifications.</li>
-    <li>Live Activities, widgets, shortcuts and the Apple Watch app, which show the state of the app as of its last contact with your server. The Live Activity of the study timer updates while the app is open or in the background, but not through a remote push while the app is closed.</li>
-    <li>Browser notifications, if you use the web interface of your server in a browser: they go through your browser's own push service and do not depend on Apple's key for the app.</li>
-  </ul>
-  <p>Reports, nudges and other messages that your server would send as push notifications reach you in the app when you open it, not as a push message on the lock screen.</p>
-
-  <h3 id="update">Which server version do I need?</h3>
-  <p>Keep your server up to date. A newer app can use functions that an old server does not offer yet. The release notes on <a href="https://github.com/lukislp/studylife/releases">GitHub</a> list what changed.</p>
-
-  <h3 id="signout">What happens to my data on the device when I sign out or delete my account?</h3>
-  <p>The app removes its local copies: caches, widget and Apple Watch data, Spotlight entries, exported files, shared text not yet sent and delivered notifications. Section 3.3 of the <a href="/en/studylife/#device">privacy policy</a> lists what is removed. To delete the account itself, use Setup in the app (<a href="/en/studylife/#delete-account">section 5.1</a>).</p>
+  <p>Moved to <a href="/en/studyatrium/support/">https://legal.lktec.org/en/studyatrium/support/</a></p>
 </main>
-<footer class="site-footer">
-  <ul>
-    <li><a href="https://lktec.org/en/imprint">Legal notice</a></li>
-    <li><a href="/en/#this-website">Privacy on this website</a></li>
-    <li><a href="https://github.com/lukislp/legal/commits/main">Change history</a></li>
-    <li><a href="/studylife/support/" hreflang="de">Deutsche Fassung</a></li>
-  </ul>
-</footer>
 </body>
 </html>
