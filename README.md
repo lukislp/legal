@@ -33,7 +33,10 @@ first and publishes only if it passes, then copies just the public files (pages,
 | --- | --- |
 | `index.html`, `en/index.html` | start page (DE, EN) |
 | `<app>/index.html`, `en/<app>/index.html` | privacy policy of an app (DE, EN) |
-| `studylife/support/index.html`, `en/studylife/support/index.html` | support page of StudyAtrium (DE, EN): the support URL for App Store Connect |
+| `studyatrium/support/index.html`, `en/studyatrium/support/index.html` | support page of StudyAtrium (DE, EN): the support URL for App Store Connect |
+| `studylife/**/index.html`, `en/studylife/**/index.html` | forwarding pages from the former StudyLife URLs to `/studyatrium/` (meta refresh, canonical link, noindex) |
+| `404.html` | page for unknown addresses (GitHub Pages serves it with HTTP 404) |
+| `robots.txt`, `sitemap.xml` | crawler rules (same AI-training opt-out as lktec.org) and the list of canonical pages |
 | `assets/style.css` | the only stylesheet; light and dark via `prefers-color-scheme` |
 | `scripts/check.py` | site check, run in CI on every pull request |
 | `CNAME` | custom domain `legal.lktec.org` |
